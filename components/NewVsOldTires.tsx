@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion } from "motion/react"
 import { CheckCircle, XCircle, Star, Award, Shield, DollarSign } from 'lucide-react'
 
 const NewVsOldTires = () => {

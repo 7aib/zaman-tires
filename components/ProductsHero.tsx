@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion } from "motion/react"
 import { Car, Truck, Zap, Shield } from 'lucide-react'
 
 const ProductsHero = () => {

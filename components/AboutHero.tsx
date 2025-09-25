@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion } from "motion/react"
 import { Star, MapPin, Phone, Award } from 'lucide-react'
 
 const AboutHero = () => {

@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion } from "motion/react"
 import { Star, Quote, ExternalLink, MessageCircle } from 'lucide-react'
 
 const GoogleReviews = () => {

@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion } from "motion/react"
 import { Clock, Calendar, Phone, MapPin } from 'lucide-react'
 
 const BusinessHours = () => {

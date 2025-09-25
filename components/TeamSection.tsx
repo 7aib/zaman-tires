@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion } from "motion/react"
 import { Award, Users, Wrench, Star } from 'lucide-react'
 
 const TeamSection = () => {

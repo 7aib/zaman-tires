@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion } from "motion/react"
 import { Star, Users, MessageCircle, Award } from 'lucide-react'
 
 const ReviewsHero = () => {

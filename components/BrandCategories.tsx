@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion } from "motion/react"
 import { Globe, Factory, Star, Award } from 'lucide-react'
 
 const BrandCategories = () => {

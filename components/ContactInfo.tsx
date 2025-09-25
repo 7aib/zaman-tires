@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion } from "motion/react"
 import { Phone, MapPin, Clock, Mail, MessageCircle, Star } from 'lucide-react'
 
 const ContactInfo = () => {
