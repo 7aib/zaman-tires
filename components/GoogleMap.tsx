@@ -51,7 +51,7 @@ const GoogleMap = () => {
                   </p>
                   <div className="flex flex-wrap gap-2">
                     <a
-                      href="https://share.google/v8LnVtVICJoSqbK1Q"
+                      href="https://www.google.com/maps/dir/?api=1&destination=33.75530,72.74754"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center space-x-2 bg-primary-600 hover:bg-primary-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200 text-sm"

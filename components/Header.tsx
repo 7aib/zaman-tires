@@ -1,30 +1,39 @@
-'use client'
+"use client";
 
-import { useState, useEffect } from 'react'
-import Link from 'next/link'
-import { Menu, X, Phone, MapPin, Clock } from 'lucide-react'
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { Menu, X, Phone, MapPin, Clock } from "lucide-react";
+import { computeStoreStatus } from "@/utils/shopStatus";
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [storeStatus, setStoreStatus] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const update = () => setStoreStatus(computeStoreStatus(new Date()));
+    update();
+    const id = setInterval(update, 60 * 1000);
+    return () => clearInterval(id);
+  }, []);
 
   const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'About Us', href: '/about' },
-    { name: 'Services', href: '/services' },
-    { name: 'Brands', href: '/brands' },
-    { name: 'Products', href: '/products' },
-    { name: 'Reviews', href: '/reviews' },
-    { name: 'Contact', href: '/contact' },
-  ]
+    { name: "Home", href: "/" },
+    { name: "About Us", href: "/about" },
+    { name: "Services", href: "/services" },
+    { name: "Brands", href: "/brands" },
+    { name: "Products", href: "/products" },
+    { name: "Reviews", href: "/reviews" },
+    { name: "Contact", href: "/contact" },
+  ];
 
   return (
     <>
@@ -35,7 +44,10 @@ const Header = () => {
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-1">
                 <Phone className="h-4 w-4" />
-                <a href="tel:+923005888776" className="hover:text-primary-300 transition-colors">
+                <a
+                  href="tel:+923005888776"
+                  className="hover:text-primary-300 transition-colors"
+                >
                   0300 5888776
                 </a>
               </div>
@@ -46,25 +58,33 @@ const Header = () => {
             </div>
             <div className="flex items-center space-x-1">
               <Clock className="h-4 w-4" />
-              <span>Open ⋅ Closes 9 pm</span>
+              <span>{storeStatus || "Checking hours…"}</span>
             </div>
           </div>
         </div>
       </div>
 
       {/* Main Header */}
-      <header className={`sticky top-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-lg' : 'bg-white shadow-sm'
-      }`}>
+      <header
+        className={`sticky top-0 z-50 transition-all duration-300 ${
+          isScrolled ? "bg-white shadow-lg" : "bg-white shadow-sm"
+        }`}
+      >
         <div className="container-max">
           <div className="flex items-center justify-between py-4">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-primary-600 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-xl">Z</span>
+              <div className="w-12 h-12 rounded-full flex items-center justify-center">
+                <div className="w-12 h-12 rounded-full overflow-hidden">
+                  <img src="static/logo.jpg" alt="" />
+                </div>
+
+                {/* <span className="text-white font-bold text-xl">Z</span> */}
               </div>
               <div>
-                <h1 className="text-xl font-bold text-gray-900">Zaman Tyres Trader</h1>
+                <h1 className="text-xl font-bold text-gray-900">
+                  Zaman Tyre Trader
+                </h1>
                 <p className="text-sm text-gray-600">Wah Cantt, Pakistan</p>
               </div>
             </Link>
@@ -84,14 +104,11 @@ const Header = () => {
 
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">
-              <a
-                href="tel:+923005888776"
-                className="btn-primary"
-              >
+              <a href="tel:+923005888776" className="btn-primary">
                 Call Now
               </a>
               <a
-                href="https://share.google/v8LnVtVICJoSqbK1Q"
+                href="https://www.google.com/maps/dir/?api=1&destination=33.75530,72.74754"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary"
@@ -136,7 +153,7 @@ const Header = () => {
                     Call Now
                   </a>
                   <a
-                    href="https://share.google/v8LnVtVICJoSqbK1Q"
+                    href="https://www.google.com/maps/dir/?api=1&destination=33.75530,72.74754"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-secondary text-center"
@@ -151,7 +168,7 @@ const Header = () => {
         </div>
       </header>
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

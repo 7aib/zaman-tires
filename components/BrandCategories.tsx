@@ -1,45 +1,65 @@
-'use client'
+"use client";
 
-import { motion } from "motion/react"
-import { Globe, Factory, Star, Award } from 'lucide-react'
+import { motion } from "motion/react";
+import { Globe, Factory, Star, Award } from "lucide-react";
 
 const BrandCategories = () => {
   const categories = [
     {
       icon: Globe,
-      title: 'Imported Brands',
-      description: 'Premium international tire manufacturers from around the world',
-      brands: ['Yokohama', 'Dunlop', 'Michelin', 'Goodyear', 'Bridgestone', 'Continental', 'Pirelli', 'Hankook'],
-      features: [
-        'World-class manufacturing standards',
-        'Advanced technology and innovation',
-        'Superior quality and performance',
-        'Extensive research and development',
-        'Global recognition and trust',
-        'Premium materials and construction'
+      title: "Premium Brands",
+      description:
+        "Premium international tire manufacturers from around the world",
+      brands: [
+        "Yokohama",
+        "Dunlop",
+        "Michelin",
+        "Goodyear",
+        "Bridgestone",
+        "Continental",
+        "Pirelli",
+        "Hankook",
       ],
-      color: 'from-blue-500 to-indigo-600',
-      bgColor: 'bg-blue-50',
-      textColor: 'text-blue-900'
+      features: [
+        "World-class manufacturing standards",
+        "Advanced technology and innovation",
+        "Superior quality and performance",
+        "Extensive research and development",
+        "Global recognition and trust",
+        "Premium materials and construction",
+      ],
+      color: "from-blue-500 to-indigo-600",
+      bgColor: "bg-blue-50",
+      textColor: "text-blue-900",
     },
     {
       icon: Factory,
-      title: 'Chinese Brands',
-      description: 'Quality Chinese tire manufacturers offering excellent value',
-      brands: ['New Age', 'Triangle', 'Linglong', 'Sailun', 'Giti', 'Nexen', 'Falken', 'Kenda'],
-      features: [
-        'Excellent value for money',
-        'Quality construction and materials',
-        'Good performance and durability',
-        'Wide range of options',
-        'Competitive pricing',
-        'Reliable service and support'
+      title: "Chinese Brands",
+      description:
+        "Quality Chinese tire manufacturers offering excellent value",
+      brands: [
+        "New Age",
+        "Triangle",
+        "Linglong",
+        "Sailun",
+        "Giti",
+        "Nexen",
+        "Falken",
+        "Kenda",
       ],
-      color: 'from-green-500 to-emerald-600',
-      bgColor: 'bg-green-50',
-      textColor: 'text-green-900'
-    }
-  ]
+      features: [
+        "Excellent value for money",
+        "Quality construction and materials",
+        "Good performance and durability",
+        "Wide range of options",
+        "Competitive pricing",
+        "Reliable service and support",
+      ],
+      color: "from-green-500 to-emerald-600",
+      bgColor: "bg-green-50",
+      textColor: "text-green-900",
+    },
+  ];
 
   return (
     <section className="section-padding bg-gray-50">
@@ -56,15 +76,16 @@ const BrandCategories = () => {
             Brand <span className="text-primary-600">Categories</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            We offer two main categories of tire brands to meet different needs and budgets. 
-            Both categories provide quality tires with their own unique advantages.
+            We offer two main categories of tire brands to meet different needs
+            and budgets. Both categories provide quality tires with their own
+            unique advantages.
           </p>
         </motion.div>
 
         {/* Categories */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {categories.map((category, index) => {
-            const IconComponent = category.icon
+            const IconComponent = category.icon;
             return (
               <motion.div
                 key={category.title}
@@ -75,16 +96,28 @@ const BrandCategories = () => {
                 className="relative"
               >
                 {/* Background Gradient */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${category.color} rounded-2xl opacity-10`} />
-                
-                <div className={`relative ${category.bgColor} rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300`}>
+                <div
+                  className={`absolute inset-0 bg-gradient-to-br ${category.color} rounded-2xl opacity-10`}
+                />
+
+                <div
+                  className={`relative ${category.bgColor} rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300`}
+                >
                   {/* Header */}
                   <div className="text-center mb-8">
-                    <div className={`w-20 h-20 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
+                    <div
+                      className={`w-20 h-20 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center mx-auto mb-4`}
+                    >
                       <IconComponent className="h-10 w-10 text-white" />
                     </div>
-                    <h3 className={`text-3xl font-bold ${category.textColor} mb-3`}>{category.title}</h3>
-                    <p className="text-gray-600 leading-relaxed">{category.description}</p>
+                    <h3
+                      className={`text-3xl font-bold ${category.textColor} mb-3`}
+                    >
+                      {category.title}
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      {category.description}
+                    </p>
                   </div>
 
                   {/* Sample Brands */}
@@ -95,8 +128,13 @@ const BrandCategories = () => {
                     </h4>
                     <div className="grid grid-cols-2 gap-3">
                       {category.brands.map((brand, brandIndex) => (
-                        <div key={brandIndex} className="bg-white rounded-lg p-3 text-center shadow-sm">
-                          <span className="text-sm font-medium text-gray-700">{brand}</span>
+                        <div
+                          key={brandIndex}
+                          className="bg-white rounded-lg p-3 text-center shadow-sm"
+                        >
+                          <span className="text-sm font-medium text-gray-700">
+                            {brand}
+                          </span>
                         </div>
                       ))}
                     </div>
@@ -110,7 +148,10 @@ const BrandCategories = () => {
                     </h4>
                     <ul className="space-y-2">
                       {category.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-start space-x-2 text-sm text-gray-600">
+                        <li
+                          key={featureIndex}
+                          className="flex items-start space-x-2 text-sm text-gray-600"
+                        >
                           <div className="w-1.5 h-1.5 bg-primary-600 rounded-full mt-2 flex-shrink-0" />
                           <span>{feature}</span>
                         </li>
@@ -129,7 +170,7 @@ const BrandCategories = () => {
                   </div>
                 </div>
               </motion.div>
-            )
+            );
           })}
         </div>
 
@@ -146,7 +187,9 @@ const BrandCategories = () => {
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-4">
-              <h4 className="text-xl font-semibold text-gray-900 mb-4">Choose Imported Brands If:</h4>
+              <h4 className="text-xl font-semibold text-gray-900 mb-4">
+                Choose Premium Brands If:
+              </h4>
               <ul className="space-y-2">
                 <li className="flex items-start space-x-2 text-gray-600">
                   <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-2 flex-shrink-0" />
@@ -167,7 +210,9 @@ const BrandCategories = () => {
               </ul>
             </div>
             <div className="space-y-4">
-              <h4 className="text-xl font-semibold text-gray-900 mb-4">Choose Chinese Brands If:</h4>
+              <h4 className="text-xl font-semibold text-gray-900 mb-4">
+                Choose Chinese Brands If:
+              </h4>
               <ul className="space-y-2">
                 <li className="flex items-start space-x-2 text-gray-600">
                   <div className="w-1.5 h-1.5 bg-green-600 rounded-full mt-2 flex-shrink-0" />
@@ -191,7 +236,7 @@ const BrandCategories = () => {
         </motion.div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default BrandCategories
+export default BrandCategories;

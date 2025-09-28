@@ -1,57 +1,63 @@
-'use client'
+"use client";
 
-import { motion } from "motion/react"
-import { 
-  Shield, 
-  Award, 
-  Clock, 
-  Users, 
-  Star, 
+import { motion } from "motion/react";
+import {
+  Shield,
+  Award,
+  Clock,
+  Users,
+  Star,
   CheckCircle,
   MapPin,
-  Phone
-} from 'lucide-react'
+  Phone,
+} from "lucide-react";
 
 const WhyChooseUs = () => {
   const features = [
     {
       icon: Award,
-      title: '90+ Tire Brands',
-      description: 'Wide selection of premium imported and Chinese tire brands to meet every need and budget.'
+      title: "90+ Tire Brands",
+      description:
+        "Wide selection of premium imported and Chinese tire brands to meet every need and budget.",
     },
     {
       icon: Shield,
-      title: 'Trusted Service',
-      description: 'Established tire shop in Wah Cantt with years of experience and thousands of satisfied customers.'
+      title: "Trusted Service",
+      description:
+        "Established tire shop in Wah Cantt with years of experience and thousands of satisfied customers.",
     },
     {
       icon: Clock,
-      title: 'Quick Service',
-      description: 'Fast and efficient tire services without compromising on quality. Get back on the road quickly.'
+      title: "Quick Service",
+      description:
+        "Fast and efficient tire services without compromising on quality. Get back on the road quickly.",
     },
     {
       icon: Users,
-      title: 'Expert Team',
-      description: 'Professional technicians with extensive experience in tire installation and automotive services.'
+      title: "Expert Team",
+      description:
+        "Professional technicians with extensive experience in tire installation and automotive services.",
     },
     {
       icon: Star,
-      title: '4.0 Rating',
-      description: 'Highly rated by our customers with 62+ positive reviews on Google.'
+      title: "4.0 Rating",
+      description:
+        "Highly rated by our customers with 62+ positive reviews on Google.",
     },
     {
       icon: CheckCircle,
-      title: 'Quality Assurance',
-      description: 'All our services come with quality assurance and customer satisfaction guarantee.'
-    }
-  ]
+      title: "Quality Assurance",
+      description:
+        "All our services come with quality assurance and customer satisfaction guarantee.",
+    },
+  ];
 
   const stats = [
-    { number: '90+', label: 'Tire Brands' },
-    { number: '1000+', label: 'Happy Customers' },
-    { number: '4.0', label: 'Star Rating' },
-    { number: '5+', label: 'Years Experience' }
-  ]
+    { number: "90+", label: "Tire Brands" },
+    { number: "1000+", label: "Happy Customers" },
+    { number: "4.0", label: "Star Rating" },
+    { number: "20+", label: "Years Experience" },
+  ];
 
   return (
     <section className="section-padding bg-gray-900 text-white">
@@ -65,10 +71,11 @@ const WhyChooseUs = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Why Choose <span className="text-primary-400">Zaman Tyres Trader</span>
+            Why Choose{" "}
+            <span className="text-primary-400">Zaman Tyres Trader</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            We are Wah Cantt's most trusted tire shop, offering premium services 
+            We are Wah Cantt's most trusted tire shop, offering premium services
             with unmatched quality and customer satisfaction.
           </p>
         </motion.div>
@@ -86,9 +93,7 @@ const WhyChooseUs = () => {
               <div className="text-4xl md:text-5xl font-bold text-primary-400 mb-2">
                 {stat.number}
               </div>
-              <div className="text-gray-300 font-medium">
-                {stat.label}
-              </div>
+              <div className="text-gray-300 font-medium">{stat.label}</div>
             </div>
           ))}
         </motion.div>
@@ -96,7 +101,7 @@ const WhyChooseUs = () => {
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {features.map((feature, index) => {
-            const IconComponent = feature.icon
+            const IconComponent = feature.icon;
             return (
               <motion.div
                 key={feature.title}
@@ -116,7 +121,7 @@ const WhyChooseUs = () => {
                   {feature.description}
                 </p>
               </motion.div>
-            )
+            );
           })}
         </div>
 
@@ -132,10 +137,10 @@ const WhyChooseUs = () => {
             Conveniently Located in Wah Cantt
           </h3>
           <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
-            Easy to find on GT Road, Cantt, Wah. Open daily from 9 AM to 9 PM. 
+            Easy to find on GT Road, Cantt, Wah. Open daily from 9 AM to 9 PM.
             Call us or visit our shop for all your tire needs.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 mb-8">
             <div className="flex items-center space-x-3 text-white">
               <MapPin className="h-6 w-6" />
@@ -155,7 +160,7 @@ const WhyChooseUs = () => {
               Call Now
             </a>
             <a
-              href="https://share.google/v8LnVtVICJoSqbK1Q"
+              href="https://www.google.com/maps/dir/?api=1&destination=33.75530,72.74754"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-primary-700 hover:bg-primary-800 text-white font-semibold py-3 px-8 rounded-lg border border-primary-500 transition-colors duration-200"
@@ -166,7 +171,7 @@ const WhyChooseUs = () => {
         </motion.div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default WhyChooseUs
+export default WhyChooseUs;

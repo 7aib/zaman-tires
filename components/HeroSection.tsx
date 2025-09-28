@@ -1,17 +1,18 @@
-'use client'
+"use client";
 
-import { ChevronRight, Star, MapPin, Phone } from 'lucide-react'
-import { motion } from "motion/react"
+import { ChevronRight, Star, MapPin, Phone } from "lucide-react";
+import { motion } from "motion/react";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <div 
+        <div
           className="w-full h-full bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80)',
+            backgroundImage:
+              "url(https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80)",
           }}
         />
         <div className="absolute inset-0 bg-black bg-opacity-50" />
@@ -34,7 +35,10 @@ const HeroSection = () => {
           >
             <div className="flex">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
+                <Star
+                  key={i}
+                  className="h-4 w-4 text-yellow-400 fill-current"
+                />
               ))}
             </div>
             <span className="text-sm font-medium">4.0 Rating • 62 Reviews</span>
@@ -61,7 +65,7 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed"
           >
-            Trusted by thousands of customers. Over 90+ tire brands available. 
+            Trusted by thousands of customers. Over 90+ tire brands available.
             Expert tire change, wheel alignment, and automotive services.
           </motion.p>
 
@@ -96,9 +100,9 @@ const HeroSection = () => {
               <Phone className="h-5 w-5" />
               <span>Call Now</span>
             </a>
-            
+
             <a
-              href="https://share.google/v8LnVtVICJoSqbK1Q"
+              href="https://www.google.com/maps/dir/?api=1&destination=33.75530,72.74754"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white bg-opacity-20 backdrop-blur-sm hover:bg-opacity-30 text-white font-semibold py-4 px-8 rounded-lg border border-white border-opacity-30 transition-all duration-300 hover:scale-105 flex items-center space-x-2 text-lg"
@@ -114,16 +118,11 @@ const HeroSection = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1 }}
             className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-          >
-            <div className="flex flex-col items-center space-y-2 text-gray-300">
-              <span className="text-sm">Scroll to explore</span>
-              <ChevronRight className="h-6 w-6 animate-bounce" style={{ transform: 'rotate(90deg)' }} />
-            </div>
-          </motion.div>
+          ></motion.div>
         </motion.div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default HeroSection
+export default HeroSection;

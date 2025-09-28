@@ -26,8 +26,8 @@ export const metadata: Metadata = {
     'tire shop GT Road Cantt'
   ],
   authors: [{ name: 'Zaman Tyres Trader' }],
-  creator: 'Zaman Tyres Trader',
-  publisher: 'Zaman Tyres Trader',
+  creator: 'Zohaib Shamshad',
+  publisher: 'Zohaib Shamshad',
   robots: {
     index: true,
     follow: true,
