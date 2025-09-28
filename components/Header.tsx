@@ -18,7 +18,6 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-
   useEffect(() => {
     const update = () => setStoreStatus(computeStoreStatus(new Date()));
     update();
@@ -75,12 +74,16 @@ const Header = () => {
           <div className="flex items-center justify-between py-4">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-primary-600 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-xl">Z</span>
+              <div className="w-12 h-12 rounded-full flex items-center justify-center">
+                <div className="w-12 h-12 rounded-full overflow-hidden">
+                  <img src="static/logo.jpg" alt="" />
+                </div>
+
+                {/* <span className="text-white font-bold text-xl">Z</span> */}
               </div>
               <div>
                 <h1 className="text-xl font-bold text-gray-900">
-                  Zaman Tyres Trader
+                  Zaman Tyre Trader
                 </h1>
                 <p className="text-sm text-gray-600">Wah Cantt, Pakistan</p>
               </div>

@@ -1,35 +1,35 @@
-import Link from 'next/link'
-import { Phone, MapPin, Clock, Mail, Star } from 'lucide-react'
+import Link from "next/link";
+import { Phone, MapPin, Clock, Mail, Star } from "lucide-react";
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
 
   const quickLinks = [
-    { name: 'About Us', href: '/about' },
-    { name: 'Services', href: '/services' },
-    { name: 'Brands', href: '/brands' },
-    { name: 'Products', href: '/products' },
-    { name: 'Reviews', href: '/reviews' },
-    { name: 'Contact', href: '/contact' },
-  ]
+    { name: "About Us", href: "/about" },
+    { name: "Services", href: "/services" },
+    { name: "Brands", href: "/brands" },
+    { name: "Products", href: "/products" },
+    { name: "Reviews", href: "/reviews" },
+    { name: "Contact", href: "/contact" },
+  ];
 
   const services = [
-    { name: 'Tire Change', href: '/services#tire-change' },
-    { name: 'Wheel Balance', href: '/services#wheel-balance' },
-    { name: '3D Wheel Alignment', href: '/services#wheel-alignment' },
-    { name: 'Nitrogen Air', href: '/services#nitrogen-air' },
-    { name: 'Oil Change', href: '/services#oil-change' },
-    { name: 'Rims', href: '/services#rims' },
-  ]
+    { name: "Tire Change", href: "/services#tire-change" },
+    { name: "Wheel Balance", href: "/services#wheel-balance" },
+    { name: "3D Wheel Alignment", href: "/services#wheel-alignment" },
+    { name: "Nitrogen Air", href: "/services#nitrogen-air" },
+    { name: "Oil Change", href: "/services#oil-change" },
+    { name: "Rims", href: "/services#rims" },
+  ];
 
   const brands = [
-    { name: 'Yokohama', href: '/brands#yokohama' },
-    { name: 'Dunlop', href: '/brands#dunlop' },
-    { name: 'Michelin', href: '/brands#michelin' },
-    { name: 'Goodyear', href: '/brands#goodyear' },
-    { name: 'Bridgestone', href: '/brands#bridgestone' },
-    { name: 'New Age', href: '/brands#new-age' },
-  ]
+    { name: "Yokohama", href: "/brands#yokohama" },
+    { name: "Dunlop", href: "/brands#dunlop" },
+    { name: "Michelin", href: "/brands#michelin" },
+    { name: "Goodyear", href: "/brands#goodyear" },
+    { name: "Bridgestone", href: "/brands#bridgestone" },
+    { name: "New Age", href: "/brands#new-age" },
+  ];
 
   return (
     <footer className="bg-gray-900 text-white">
@@ -39,7 +39,10 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-primary-600 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-lg">Z</span>
+                <div className="w-10 h-10 rounded-full overflow-hidden">
+                  <img src="static/logo.jpg" alt="" />
+                </div>
+                {/* <span className="text-white font-bold text-lg">Z</span> */}
               </div>
               <div>
                 <h3 className="text-lg font-bold">Zaman Tyres Trader</h3>
@@ -47,13 +50,17 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">
-              Leading tire shop in Wah Cantt offering premium tires, rims, wheel alignment, 
-              and automotive services. Over 90+ tire brands available.
+              Leading tire shop in Wah Cantt offering premium tires, rims, wheel
+              alignment, and automotive services. Over 90+ tire brands
+              available.
             </p>
             <div className="flex items-center space-x-1">
               <div className="flex">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
+                  <Star
+                    key={i}
+                    className="h-4 w-4 text-yellow-400 fill-current"
+                  />
                 ))}
               </div>
               <span className="text-sm text-gray-300">4.0 (62 reviews)</span>
@@ -125,7 +132,9 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <Clock className="h-5 w-5 text-primary-400 mt-0.5 flex-shrink-0" />
                 <div>
-                  <p className="text-gray-300 text-sm">Mon - Sun: 9:00 AM - 9:00 PM</p>
+                  <p className="text-gray-300 text-sm">
+                    Mon - Sun: 9:00 AM - 9:00 PM
+                  </p>
                 </div>
               </div>
             </div>
@@ -167,7 +176,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

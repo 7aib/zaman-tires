@@ -23,11 +23,10 @@ const BusinessHours = () => {
     { day: "Tuesday", hours: "9:00 AM - 9:00 PM", status: "open" },
     { day: "Wednesday", hours: "9:00 AM - 9:00 PM", status: "open" },
     { day: "Thursday", hours: "9:00 AM - 9:00 PM", status: "open" },
-    { day: "Friday", hours: "9:00 AM - 9:00 PM", status: "close" },
+    { day: "Friday", hours: "Closed", status: "close" },
     { day: "Saturday", hours: "9:00 AM - 9:00 PM", status: "open" },
     { day: "Sunday", hours: "9:00 AM - 9:00 PM", status: "open" },
   ];
-
 
   return (
     <section className="section-padding bg-gray-50">
@@ -43,7 +42,7 @@ const BusinessHours = () => {
             Business <span className="text-primary-600">Hours</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            We're open 7 days a week to serve you better. Extended hours ensure
+            We're open 6 days a week to serve you better. Extended hours ensure
             you can get your tire services when it's most convenient for you.
           </p>
         </motion.div>
@@ -66,9 +65,7 @@ const BusinessHours = () => {
                   <h3 className="text-2xl font-bold text-gray-900">
                     Operating Hours
                   </h3>
-                  <p
-                    className={`text-lg font-semibold ${statusColor}`}
-                  >
+                  <p className={`text-lg font-semibold ${statusColor}`}>
                     {currentStatus || "Checking hours…"}
                   </p>
                 </div>
