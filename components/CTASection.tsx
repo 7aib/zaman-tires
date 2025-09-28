@@ -141,7 +141,7 @@ const CTASection = () => {
               </div>
             </div>
             <p className="text-primary-100 mt-4 text-sm">
-              We're open 7 days a week to serve you better!
+              We're open 6 days a week to serve you better!
             </p>
           </motion.div>
         </motion.div>

@@ -1,68 +1,71 @@
-'use client'
+"use client";
 
-import { motion } from "motion/react"
-import { Car, Truck, Zap, Star, Shield, Award } from 'lucide-react'
+import { motion } from "motion/react";
+import { Car, Truck, Zap, Star, Shield, Award } from "lucide-react";
 
 const ProductCategories = () => {
   const categories = [
     {
       icon: Car,
-      title: 'Car Tires',
-      subtitle: 'Perfect for Sedans & Hatchbacks',
-      description: 'Comprehensive selection of car tires for all makes and models. From economy to premium options, we have tires for every car owner.',
+      title: "Car Tires",
+      subtitle: "Perfect for Sedans & Hatchbacks",
+      description:
+        "Comprehensive selection of car tires for all makes and models. From economy to premium options, we have tires for every car owner.",
       features: [
-        'Economy to Premium Options',
-        'All Season Tires Available',
-        'High Performance Variants',
-        'Fuel Efficient Models',
-        'Quiet & Comfortable Ride',
-        'Warranty Protection'
+        "Economy to Premium Options",
+        "All Season Tires Available",
+        "High Performance Variants",
+        "Fuel Efficient Models",
+        "Quiet & Comfortable Ride",
+        "Warranty Protection",
       ],
-      sizes: ['13" - 18"', '185/60R14 to 275/40R18', 'Various Speed Ratings'],
-      brands: ['Yokohama', 'Dunlop', 'Michelin', 'Goodyear', 'Bridgestone'],
-      priceRange: 'PKR 3,000 - 25,000',
-      color: 'from-blue-500 to-blue-600',
-      bgColor: 'bg-blue-50'
+      sizes: ['12" - 19"', "145/70R12 to 225/45R19", "Various Speed Ratings"],
+      brands: ["Yokohama", "Dunlop", "Michelin", "Goodyear", "Bridgestone"],
+      priceRange: "PKR 3,000 - 109,000",
+      color: "from-blue-500 to-blue-600",
+      bgColor: "bg-blue-50",
     },
     {
       icon: Truck,
-      title: 'SUV Tires',
-      subtitle: 'Built for Adventure & Performance',
-      description: 'Robust SUV tires designed for enhanced performance, durability, and safety. Perfect for both city driving and off-road adventures.',
+      title: "SUV Tires",
+      subtitle: "Built for Adventure & Performance",
+      description:
+        "Robust SUV tires designed for enhanced performance, durability, and safety. Perfect for both city driving and off-road adventures.",
       features: [
-        'Enhanced Traction & Grip',
-        'Durable Construction',
-        'All Terrain Options',
-        'Heavy Duty Performance',
-        'Weather Resistant',
-        'Extended Tread Life'
+        "Enhanced Traction & Grip",
+        "Durable Construction",
+        "All Terrain Options",
+        "Heavy Duty Performance",
+        "Weather Resistant",
+        "Extended Tread Life",
       ],
-      sizes: ['15" - 22"', '215/70R15 to 295/40R22', 'Load Rating E & F'],
-      brands: ['Yokohama', 'Dunlop', 'Michelin', 'Goodyear', 'Bridgestone'],
-      priceRange: 'PKR 8,000 - 45,000',
-      color: 'from-green-500 to-green-600',
-      bgColor: 'bg-green-50'
+      sizes: ['15" - 22"', "215/70R15 to 285/60R22", "Load Rating E & F"],
+      brands: ["Yokohama", "Dunlop", "Michelin", "Goodyear", "Bridgestone"],
+      priceRange: "PKR 8,000 - 45,000",
+      color: "from-green-500 to-green-600",
+      bgColor: "bg-green-50",
     },
     {
       icon: Zap,
-      title: 'Pickup Tires',
-      subtitle: 'Heavy Duty & Commercial Grade',
-      description: 'Heavy-duty pickup tires designed for commercial use, towing, and hauling. Built to withstand the toughest conditions.',
+      title: "Pickup Tires",
+      subtitle: "Heavy Duty & Commercial Grade",
+      description:
+        "Heavy-duty pickup tires designed for commercial use, towing, and hauling. Built to withstand the toughest conditions.",
       features: [
-        'Commercial Grade Quality',
-        'High Load Capacity',
-        'Towing & Hauling Ready',
-        'Durable Sidewalls',
-        'Long Tread Life',
-        'Cost Effective'
+        "Commercial Grade Quality",
+        "High Load Capacity",
+        "Towing & Hauling Ready",
+        "Durable Sidewalls",
+        "Long Tread Life",
+        "Cost Effective",
       ],
-      sizes: ['15" - 20"', '225/70R15 to 285/55R20', 'Load Rating D, E & F'],
-      brands: ['Yokohama', 'Dunlop', 'Michelin', 'Goodyear', 'Bridgestone'],
-      priceRange: 'PKR 6,000 - 35,000',
-      color: 'from-purple-500 to-purple-600',
-      bgColor: 'bg-purple-50'
-    }
-  ]
+      sizes: ['15" - 18"', "225/70R15 to 265/65R18", "Load Rating D, E & F"],
+      brands: ["Yokohama", "Dunlop", "Michelin", "Goodyear", "Bridgestone"],
+      priceRange: "PKR 6,000 - 35,000",
+      color: "from-purple-500 to-purple-600",
+      bgColor: "bg-purple-50",
+    },
+  ];
 
   return (
     <section className="section-padding bg-gray-50">
@@ -79,15 +82,16 @@ const ProductCategories = () => {
             Tire <span className="text-primary-600">Categories</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Specialized tire solutions for different vehicle types. Each category is designed 
-            to meet specific performance requirements and driving conditions.
+            Specialized tire solutions for different vehicle types. Each
+            category is designed to meet specific performance requirements and
+            driving conditions.
           </p>
         </motion.div>
 
         {/* Categories */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {categories.map((category, index) => {
-            const IconComponent = category.icon
+            const IconComponent = category.icon;
             return (
               <motion.div
                 key={category.title}
@@ -98,17 +102,29 @@ const ProductCategories = () => {
                 className="relative"
               >
                 {/* Background Gradient */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${category.color} rounded-2xl opacity-5`} />
-                
-                <div className={`relative ${category.bgColor} rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300`}>
+                <div
+                  className={`absolute inset-0 bg-gradient-to-br ${category.color} rounded-2xl opacity-5`}
+                />
+
+                <div
+                  className={`relative ${category.bgColor} rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300`}
+                >
                   {/* Header */}
                   <div className="text-center mb-6">
-                    <div className={`w-20 h-20 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
+                    <div
+                      className={`w-20 h-20 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center mx-auto mb-4`}
+                    >
                       <IconComponent className="h-10 w-10 text-white" />
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{category.title}</h3>
-                    <p className="text-primary-600 font-semibold mb-3">{category.subtitle}</p>
-                    <p className="text-gray-600 leading-relaxed">{category.description}</p>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                      {category.title}
+                    </h3>
+                    <p className="text-primary-600 font-semibold mb-3">
+                      {category.subtitle}
+                    </p>
+                    <p className="text-gray-600 leading-relaxed">
+                      {category.description}
+                    </p>
                   </div>
 
                   {/* Features */}
@@ -119,7 +135,10 @@ const ProductCategories = () => {
                     </h4>
                     <ul className="space-y-2">
                       {category.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-start space-x-2 text-sm text-gray-600">
+                        <li
+                          key={featureIndex}
+                          className="flex items-start space-x-2 text-sm text-gray-600"
+                        >
                           <div className="w-1.5 h-1.5 bg-primary-600 rounded-full mt-2 flex-shrink-0" />
                           <span>{feature}</span>
                         </li>
@@ -136,16 +155,26 @@ const ProductCategories = () => {
                       </h4>
                       <div className="space-y-1">
                         {category.sizes.map((size, sizeIndex) => (
-                          <p key={sizeIndex} className="text-sm text-gray-600 bg-white rounded px-2 py-1">{size}</p>
+                          <p
+                            key={sizeIndex}
+                            className="text-sm text-gray-600 bg-white rounded px-2 py-1"
+                          >
+                            {size}
+                          </p>
                         ))}
                       </div>
                     </div>
 
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Popular Brands</h4>
+                      <h4 className="font-semibold text-gray-900 mb-2">
+                        Popular Brands
+                      </h4>
                       <div className="flex flex-wrap gap-1">
                         {category.brands.map((brand, brandIndex) => (
-                          <span key={brandIndex} className="text-xs bg-primary-100 text-primary-700 px-2 py-1 rounded">
+                          <span
+                            key={brandIndex}
+                            className="text-xs bg-primary-100 text-primary-700 px-2 py-1 rounded"
+                          >
                             {brand}
                           </span>
                         ))}
@@ -153,8 +182,12 @@ const ProductCategories = () => {
                     </div>
 
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Price Range</h4>
-                      <p className="text-sm text-primary-600 font-semibold">{category.priceRange}</p>
+                      <h4 className="font-semibold text-gray-900 mb-2">
+                        Price Range
+                      </h4>
+                      <p className="text-sm text-primary-600 font-semibold">
+                        {category.priceRange}
+                      </p>
                     </div>
                   </div>
 
@@ -169,7 +202,7 @@ const ProductCategories = () => {
                   </div>
                 </div>
               </motion.div>
-            )
+            );
           })}
         </div>
 
@@ -183,10 +216,13 @@ const ProductCategories = () => {
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Need Help Choosing?</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Need Help Choosing?
+              </h3>
               <p className="text-gray-600 mb-6">
-                Our expert team can help you select the perfect tires for your vehicle. 
-                We consider your driving habits, vehicle specifications, and budget to recommend the best options.
+                Our expert team can help you select the perfect tires for your
+                vehicle. We consider your driving habits, vehicle
+                specifications, and budget to recommend the best options.
               </p>
               <ul className="space-y-2">
                 <li className="flex items-center space-x-2 text-gray-600">
@@ -204,10 +240,13 @@ const ProductCategories = () => {
               </ul>
             </div>
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Vehicle Compatibility</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Vehicle Compatibility
+              </h3>
               <p className="text-gray-600 mb-6">
-                We stock tires for all major vehicle makes and models. From compact cars to heavy-duty pickups, 
-                we have the right tire for your specific vehicle requirements.
+                We stock tires for all major vehicle makes and models. From
+                compact cars to heavy-duty pickups, we have the right tire for
+                your specific vehicle requirements.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-gray-50 rounded-lg p-4 text-center">
@@ -227,7 +266,9 @@ const ProductCategories = () => {
                 </div>
                 <div className="bg-gray-50 rounded-lg p-4 text-center">
                   <Shield className="h-8 w-8 text-orange-600 mx-auto mb-2" />
-                  <p className="text-sm font-semibold text-gray-900">Commercial</p>
+                  <p className="text-sm font-semibold text-gray-900">
+                    Commercial
+                  </p>
                   <p className="text-xs text-gray-600">Commercial Vehicles</p>
                 </div>
               </div>
@@ -236,7 +277,7 @@ const ProductCategories = () => {
         </motion.div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default ProductCategories
+export default ProductCategories;
