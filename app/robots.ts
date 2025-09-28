@@ -1,12 +1,12 @@
-import { MetadataRoute } from 'next'
+import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
-      userAgent: '*',
-      allow: '/',
-      disallow: ['/private/', '/admin/'],
+      userAgent: "*",
+      allow: "/",
+      disallow: ["/private/", "/admin/"],
     },
-    sitemap: 'https://zaman-tyres-trader.com/sitemap.xml',
-  }
+    sitemap: "https://zaman-tyre-trader.com/sitemap.xml",
+  };
 }

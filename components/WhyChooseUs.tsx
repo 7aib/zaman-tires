@@ -72,7 +72,7 @@ const WhyChooseUs = () => {
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Why Choose{" "}
-            <span className="text-primary-400">Zaman Tyres Trader</span>
+            <span className="text-primary-400">Zaman tyre Trader</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             We are Wah Cantt's most trusted tire shop, offering premium services

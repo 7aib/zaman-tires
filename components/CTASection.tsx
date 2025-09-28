@@ -20,7 +20,7 @@ const CTASection = () => {
             Ready to Get Started?
           </h2>
           <p className="text-xl md:text-2xl text-primary-100 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Don't wait! Contact Zaman Tyres Trader today for all your tire and
+            Don't wait! Contact Zaman tyre Trader today for all your tire and
             automotive service needs. We're here to help you get back on the
             road safely.
           </p>

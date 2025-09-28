@@ -1,17 +1,18 @@
-'use client'
+"use client";
 
-import { motion } from "motion/react"
-import { Star, MapPin, Phone, Award } from 'lucide-react'
+import { motion } from "motion/react";
+import { Star, MapPin, Phone, Award } from "lucide-react";
 
 const AboutHero = () => {
   return (
     <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <div 
+        <div
           className="w-full h-full bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80)',
+            backgroundImage:
+              "url(https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80)",
           }}
         />
         <div className="absolute inset-0 bg-black bg-opacity-60" />
@@ -34,7 +35,10 @@ const AboutHero = () => {
           >
             <div className="flex">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
+                <Star
+                  key={i}
+                  className="h-4 w-4 text-yellow-400 fill-current"
+                />
               ))}
             </div>
             <span className="text-sm font-medium">4.0 Rating • 62 Reviews</span>
@@ -47,7 +51,7 @@ const AboutHero = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-4xl md:text-6xl font-bold mb-6 text-shadow-lg"
           >
-            About <span className="text-primary-400">Zaman Tyres Trader</span>
+            About <span className="text-primary-400">Zaman tyre Trader</span>
           </motion.h1>
 
           {/* Subtitle */}
@@ -57,8 +61,9 @@ const AboutHero = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed"
           >
-            Wah Cantt's most trusted tire shop, serving the community with 
-            premium automotive services and unmatched quality since our establishment.
+            Wah Cantt's most trusted tire shop, serving the community with
+            premium automotive services and unmatched quality since our
+            establishment.
           </motion.p>
 
           {/* Key Stats */}
@@ -87,7 +92,7 @@ const AboutHero = () => {
         </motion.div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default AboutHero
+export default AboutHero;

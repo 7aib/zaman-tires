@@ -45,7 +45,7 @@ const Footer = () => {
                 {/* <span className="text-white font-bold text-lg">Z</span> */}
               </div>
               <div>
-                <h3 className="text-lg font-bold">Zaman Tyres Trader</h3>
+                <h3 className="text-lg font-bold">Zaman tyre Trader</h3>
                 <p className="text-sm text-gray-400">Trusted Tire Shop</p>
               </div>
             </div>
@@ -146,7 +146,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-center md:text-left">
               <p className="text-gray-400 text-sm">
-                © {currentYear} Zaman Tyres Trader. All rights reserved.
+                © {currentYear} Zaman tyre Trader. All rights reserved.
               </p>
               <p className="text-gray-500 text-xs mt-1">
                 Leading tire shop in Wah Cantt, Pakistan

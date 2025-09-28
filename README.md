@@ -1,6 +1,6 @@
-# Zaman Tyres Trader - Modern Tire Shop Website
+# Zaman tyre Trader - Modern Tire Shop Website
 
-A modern, responsive, and SEO-optimized website for Zaman Tyres Trader, a tire shop in Wah Cantt, Pakistan. Built with Next.js 14, TypeScript, and Tailwind CSS.
+A modern, responsive, and SEO-optimized website for Zaman tyre Trader, a tire shop in Wah Cantt, Pakistan. Built with Next.js 14, TypeScript, and Tailwind CSS.
 
 ## 🚀 Features
 
@@ -35,18 +35,20 @@ A modern, responsive, and SEO-optimized website for Zaman Tyres Trader, a tire s
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 18+
 - npm or yarn
 
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone <repository-url>
 cd zaman-tires-trader
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 # or
@@ -54,6 +56,7 @@ yarn install
 ```
 
 3. Run the development server:
+
 ```bash
 npm run dev
 # or
@@ -89,19 +92,25 @@ yarn start
 ## 🎨 Customization
 
 ### Colors
+
 The color scheme is defined in `tailwind.config.js`. Main colors:
+
 - Primary: Blue (#2563eb)
 - Secondary: Gray (#64748b)
 - Accent: Red (#ef4444)
 
 ### Content
+
 Update content in the respective component files:
+
 - Business information in `components/Header.tsx`
 - Services in `components/DetailedServices.tsx`
 - Brands in `components/AllBrands.tsx`
 
 ### Images
+
 Replace placeholder images in the `public` folder:
+
 - `hero-tires.jpg` - Hero section background
 - `og-image.jpg` - Social media preview image
 - `icon-*.png` - PWA icons
@@ -122,7 +131,7 @@ Replace placeholder images in the `public` folder:
 Create a `.env.local` file:
 
 ```env
-NEXT_PUBLIC_SITE_URL=https://zaman-tyres-trader.com
+NEXT_PUBLIC_SITE_URL=https://zaman-tyre-trader.com
 NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your_google_maps_api_key
 NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=your_ga_id
 ```
@@ -142,7 +151,7 @@ NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=your_ga_id
 
 ## 🎯 Business Information
 
-- **Name**: Zaman Tyres Trader
+- **Name**: Zaman tyre Trader
 - **Location**: GT Rd, Cantt, Wah, Pakistan
 - **Phone**: 0300 5888776
 - **Hours**: 9:00 AM - 9:00 PM (Daily)
@@ -171,10 +180,11 @@ This project is licensed under the MIT License.
 ## 🆘 Support
 
 For support or questions:
-- Email: info@zamantyres.com
+
+- Email: info@zamantyre.com
 - Phone: 0300 5888776
 - Visit: GT Rd, Cantt, Wah, Pakistan
 
 ---
 
-Built with ❤️ for Zaman Tyres Trader
+Built with ❤️ for Zaman tyre Trader

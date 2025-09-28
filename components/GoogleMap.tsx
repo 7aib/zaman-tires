@@ -1,7 +1,7 @@
-'use client'
+"use client";
 
-import { motion } from "motion/react"
-import { MapPin, Navigation, ExternalLink } from 'lucide-react'
+import { motion } from "motion/react";
+import { MapPin, Navigation, ExternalLink } from "lucide-react";
 
 const GoogleMap = () => {
   return (
@@ -17,8 +17,9 @@ const GoogleMap = () => {
             Find Us on <span className="text-primary-600">Google Maps</span>
           </h2>
           <p className="text-gray-600 mb-8 leading-relaxed">
-            Located conveniently on GT Road, Cantt, Wah. Easy to find and access from all major roads. 
-            Plenty of parking space available for your vehicle.
+            Located conveniently on GT Road, Cantt, Wah. Easy to find and access
+            from all major roads. Plenty of parking space available for your
+            vehicle.
           </p>
 
           {/* Map Container */}
@@ -33,7 +34,7 @@ const GoogleMap = () => {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Zaman Tyres Trader Location"
+                title="Zaman tyre Trader Location"
               />
             </div>
 
@@ -44,9 +45,12 @@ const GoogleMap = () => {
                   <MapPin className="h-6 w-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Zaman Tyres Trader</h3>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                    Zaman tyre Trader
+                  </h3>
                   <p className="text-gray-600 mb-3">
-                    GT Rd, Cantt, Wah<br />
+                    GT Rd, Cantt, Wah
+                    <br />
                     Pakistan
                   </p>
                   <div className="flex flex-wrap gap-2">
@@ -60,7 +64,7 @@ const GoogleMap = () => {
                       <span>Get Directions</span>
                     </a>
                     <a
-                      href="https://www.google.com/search?q=Zaman+Tyres+Trader+Wah+Cantt"
+                      href="https://www.google.com/search?q=Zaman+tyre+Trader+Wah+Cantt"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center space-x-2 bg-gray-600 hover:bg-gray-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200 text-sm"
@@ -76,7 +80,9 @@ const GoogleMap = () => {
 
           {/* Location Details */}
           <div className="bg-white rounded-xl shadow-lg p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Location Details</h3>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">
+              Location Details
+            </h3>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
                 <div className="w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -84,37 +90,50 @@ const GoogleMap = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">Easy to Find</h4>
-                  <p className="text-gray-600 text-sm">Located on main GT Road, easily accessible from all directions</p>
+                  <p className="text-gray-600 text-sm">
+                    Located on main GT Road, easily accessible from all
+                    directions
+                  </p>
                 </div>
               </div>
-              
+
               <div className="flex items-start space-x-3">
                 <div className="w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                   <div className="w-2 h-2 bg-primary-600 rounded-full" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">Ample Parking</h4>
-                  <p className="text-gray-600 text-sm">Free parking space available for customers</p>
+                  <p className="text-gray-600 text-sm">
+                    Free parking space available for customers
+                  </p>
                 </div>
               </div>
-              
+
               <div className="flex items-start space-x-3">
                 <div className="w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                   <div className="w-2 h-2 bg-primary-600 rounded-full" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900">Public Transport</h4>
-                  <p className="text-gray-600 text-sm">Well connected by public transport and rickshaws</p>
+                  <h4 className="font-semibold text-gray-900">
+                    Public Transport
+                  </h4>
+                  <p className="text-gray-600 text-sm">
+                    Well connected by public transport and rickshaws
+                  </p>
                 </div>
               </div>
-              
+
               <div className="flex items-start space-x-3">
                 <div className="w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                   <div className="w-2 h-2 bg-primary-600 rounded-full" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900">Landmarks Nearby</h4>
-                  <p className="text-gray-600 text-sm">Close to Wah Cantt main market and residential areas</p>
+                  <h4 className="font-semibold text-gray-900">
+                    Landmarks Nearby
+                  </h4>
+                  <p className="text-gray-600 text-sm">
+                    Close to Wah Cantt main market and residential areas
+                  </p>
                 </div>
               </div>
             </div>
@@ -122,7 +141,7 @@ const GoogleMap = () => {
         </motion.div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default GoogleMap
+export default GoogleMap;
