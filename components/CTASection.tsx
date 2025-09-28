@@ -36,7 +36,7 @@ const CTASection = () => {
             </a>
 
             <a
-              href="https://share.google/v8LnVtVICJoSqbK1Q"
+              href="https://www.google.com/maps/dir/?api=1&destination=33.75530,72.74754"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-primary-800 hover:bg-primary-900 text-white font-semibold py-4 px-8 rounded-lg border border-primary-500 transition-all duration-300 hover:scale-105 flex items-center space-x-3 text-lg"
@@ -88,7 +88,7 @@ const CTASection = () => {
                 Come to our shop in Wah Cantt
               </p>
               <a
-                href="https://share.google/v8LnVtVICJoSqbK1Q"
+                href="https://www.google.com/maps/dir/?api=1&destination=33.75530,72.74754"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-2 text-white hover:text-primary-200 font-medium transition-colors"

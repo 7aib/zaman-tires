@@ -160,7 +160,7 @@ const WhyChooseUs = () => {
               Call Now
             </a>
             <a
-              href="https://share.google/v8LnVtVICJoSqbK1Q"
+              href="https://www.google.com/maps/dir/?api=1&destination=33.75530,72.74754"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-primary-700 hover:bg-primary-800 text-white font-semibold py-3 px-8 rounded-lg border border-primary-500 transition-colors duration-200"

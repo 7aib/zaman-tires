@@ -1,9 +1,23 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { Clock, Calendar, Phone, MapPin } from "lucide-react";
+import { getCurrentStatus, getCurrentStatusColor } from "@/utils/shopStatus";
 
 const BusinessHours = () => {
+  const [currentStatus, setCurrentStatus] = useState("");
+  const [statusColor, setStatusColor] = useState("");
+
+  useEffect(() => {
+    const updateStatus = () => {
+      setCurrentStatus(getCurrentStatus());
+      setStatusColor(getCurrentStatusColor());
+    };
+    updateStatus();
+    const id = setInterval(updateStatus, 60 * 1000);
+    return () => clearInterval(id);
+  }, []);
   const hours = [
     { day: "Monday", hours: "9:00 AM - 9:00 PM", status: "open" },
     { day: "Tuesday", hours: "9:00 AM - 9:00 PM", status: "open" },
@@ -14,19 +28,6 @@ const BusinessHours = () => {
     { day: "Sunday", hours: "9:00 AM - 9:00 PM", status: "open" },
   ];
 
-  const getCurrentStatus = () => {
-    const now = new Date();
-    const currentHour = now.getHours();
-    const isOpen = currentHour >= 9 && currentHour < 21;
-    return isOpen ? "Open Now" : "Closed";
-  };
-
-  const getCurrentStatusColor = () => {
-    const now = new Date();
-    const currentHour = now.getHours();
-    const isOpen = currentHour >= 9 && currentHour < 21;
-    return isOpen ? "text-green-600" : "text-red-600";
-  };
 
   return (
     <section className="section-padding bg-gray-50">
@@ -66,9 +67,9 @@ const BusinessHours = () => {
                     Operating Hours
                   </h3>
                   <p
-                    className={`text-lg font-semibold ${getCurrentStatusColor()}`}
+                    className={`text-lg font-semibold ${statusColor}`}
                   >
-                    {getCurrentStatus()}
+                    {currentStatus || "Checking hours…"}
                   </p>
                 </div>
               </div>
@@ -153,7 +154,7 @@ const BusinessHours = () => {
                     Call Now
                   </a>
                   <a
-                    href="https://share.google/v8LnVtVICJoSqbK1Q"
+                    href="https://www.google.com/maps/dir/?api=1&destination=33.75530,72.74754"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 bg-gray-600 hover:bg-gray-700 text-white font-semibold py-3 px-4 rounded-lg text-center transition-colors duration-200"
@@ -257,7 +258,7 @@ const BusinessHours = () => {
                 Call: 0300 5888776
               </a>
               <a
-                href="https://share.google/v8LnVtVICJoSqbK1Q"
+                href="https://www.google.com/maps/dir/?api=1&destination=33.75530,72.74754"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-primary-700 hover:bg-primary-800 text-white font-semibold py-3 px-8 rounded-lg border border-primary-500 transition-colors duration-200"

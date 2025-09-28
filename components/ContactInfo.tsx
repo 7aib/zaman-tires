@@ -17,7 +17,7 @@ const ContactInfo = () => {
       title: 'Our Location',
       details: ['GT Rd, Cantt, Wah', 'Pakistan'],
       description: 'Conveniently located on GT Road in Wah Cantt. Easy to find and access.',
-      action: { text: 'Get Directions', href: 'https://share.google/v8LnVtVICJoSqbK1Q' }
+      action: { text: 'Get Directions', href: 'https://www.google.com/maps/dir/?api=1&destination=33.75530,72.74754' }
     },
     {
       icon: Clock,

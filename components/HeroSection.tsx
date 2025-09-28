@@ -102,7 +102,7 @@ const HeroSection = () => {
             </a>
 
             <a
-              href="https://share.google/v8LnVtVICJoSqbK1Q"
+              href="https://www.google.com/maps/dir/?api=1&destination=33.75530,72.74754"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white bg-opacity-20 backdrop-blur-sm hover:bg-opacity-30 text-white font-semibold py-4 px-8 rounded-lg border border-white border-opacity-30 transition-all duration-300 hover:scale-105 flex items-center space-x-2 text-lg"

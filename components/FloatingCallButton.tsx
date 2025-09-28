@@ -16,7 +16,7 @@ const FloatingCallButton = () => {
   }
 
   const handleDirections = () => {
-    window.open('https://share.google/v8LnVtVICJoSqbK1Q', '_blank')
+    window.open('https://www.google.com/maps/dir/?api=1&destination=33.75530,72.74754', '_blank')
   }
 
   return (
