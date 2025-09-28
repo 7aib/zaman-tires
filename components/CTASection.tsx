@@ -1,8 +1,8 @@
-'use client'
+"use client";
 
-import { motion } from "motion/react"
-import { Phone, MapPin, Calendar, ArrowRight } from 'lucide-react'
-import Link from 'next/link'
+import { motion } from "motion/react";
+import { Phone, MapPin, Calendar, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const CTASection = () => {
   return (
@@ -20,8 +20,9 @@ const CTASection = () => {
             Ready to Get Started?
           </h2>
           <p className="text-xl md:text-2xl text-primary-100 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Don't wait! Contact Zaman Tyres Trader today for all your tire and automotive service needs. 
-            We're here to help you get back on the road safely.
+            Don't wait! Contact Zaman Tyres Trader today for all your tire and
+            automotive service needs. We're here to help you get back on the
+            road safely.
           </p>
 
           {/* Action Buttons */}
@@ -33,7 +34,7 @@ const CTASection = () => {
               <Phone className="h-6 w-6" />
               <span>Call Now: 0300 5888776</span>
             </a>
-            
+
             <a
               href="https://share.google/v8LnVtVICJoSqbK1Q"
               target="_blank"
@@ -59,7 +60,9 @@ const CTASection = () => {
                 <Phone className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-3">Call Us</h3>
-              <p className="text-primary-100 mb-4">Speak directly with our experts</p>
+              <p className="text-primary-100 mb-4">
+                Speak directly with our experts
+              </p>
               <a
                 href="tel:+923005888776"
                 className="inline-flex items-center space-x-2 text-white hover:text-primary-200 font-medium transition-colors"
@@ -81,7 +84,9 @@ const CTASection = () => {
                 <MapPin className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-3">Visit Us</h3>
-              <p className="text-primary-100 mb-4">Come to our shop in Wah Cantt</p>
+              <p className="text-primary-100 mb-4">
+                Come to our shop in Wah Cantt
+              </p>
               <a
                 href="https://share.google/v8LnVtVICJoSqbK1Q"
                 target="_blank"
@@ -105,7 +110,9 @@ const CTASection = () => {
                 <Calendar className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-3">Book Service</h3>
-              <p className="text-primary-100 mb-4">Schedule your appointment online</p>
+              <p className="text-primary-100 mb-4">
+                Schedule your appointment online
+              </p>
               <Link
                 href="/contact"
                 className="inline-flex items-center space-x-2 text-white hover:text-primary-200 font-medium transition-colors"
@@ -126,8 +133,10 @@ const CTASection = () => {
           >
             <h3 className="text-2xl font-semibold mb-4">Business Hours</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-lg">
+              <div className="flex justify-end">
+                <span>Saturday - Thursday:</span>
+              </div>
               <div className="flex justify-between">
-                <span>Monday - Sunday:</span>
                 <span className="font-semibold">9:00 AM - 9:00 PM</span>
               </div>
             </div>
@@ -138,7 +147,7 @@ const CTASection = () => {
         </motion.div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default CTASection
+export default CTASection;

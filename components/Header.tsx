@@ -1,96 +1,99 @@
-'use client'
+"use client";
 
-import { useState, useEffect } from 'react'
-import Link from 'next/link'
-import { Menu, X, Phone, MapPin, Clock } from 'lucide-react'
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { Menu, X, Phone, MapPin, Clock } from "lucide-react";
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [storeStatus, setStoreStatus] = useState('')
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [storeStatus, setStoreStatus] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // Store hours configuration: 0=Sunday ... 6=Saturday
   // Times are 24h in local browser time. Adjust as needed.
-  const storeHours: { [day: number]: { open: number; close: number } | null } = {
-    0: { open: 9, close: 21 },
-    1: { open: 9, close: 21 },
-    2: { open: 9, close: 21 },
-    3: { open: 9, close: 21 },
-    4: { open: 9, close: 21 },
-    5: { open: 9, close: 21 },
-    6: { open: 9, close: 21 },
-  }
+  const storeHours: { [day: number]: { open: number; close: number } | null } =
+    {
+      0: { open: 9, close: 21 },
+      1: { open: 9, close: 21 },
+      2: { open: 9, close: 21 },
+      3: { open: 9, close: 21 },
+      4: { open: 9, close: 21 },
+      5: { open: 0, close: 0 },
+      6: { open: 9, close: 21 },
+    };
 
   const formatHour = (hour24: number) => {
-    const period = hour24 >= 12 ? 'pm' : 'am'
-    const hour12 = hour24 % 12 === 0 ? 12 : hour24 % 12
-    return `${hour12} ${period}`
-  }
+    const period = hour24 >= 12 ? "pm" : "am";
+    const hour12 = hour24 % 12 === 0 ? 12 : hour24 % 12;
+    return `${hour12} ${period}`;
+  };
 
-  const getNextOpenTime = (from: Date): { dayIndex: number; hour: number } | null => {
+  const getNextOpenTime = (
+    from: Date
+  ): { dayIndex: number; hour: number } | null => {
     for (let i = 0; i < 7; i++) {
-      const dayIndex = (from.getDay() + i) % 7
-      const hours = storeHours[dayIndex]
-      if (!hours) continue
+      const dayIndex = (from.getDay() + i) % 7;
+      const hours = storeHours[dayIndex];
+      if (!hours) continue;
       if (i === 0) {
         // Same day: only consider if we haven't reached open time yet
         if (from.getHours() < hours.open) {
-          return { dayIndex, hour: hours.open }
+          return { dayIndex, hour: hours.open };
         }
       } else {
-        return { dayIndex, hour: hours.open }
+        return { dayIndex, hour: hours.open };
       }
     }
-    return null
-  }
+    return null;
+  };
 
   const computeStoreStatus = (now: Date): string => {
-    const todayIdx = now.getDay()
-    const hours = storeHours[todayIdx]
+    const todayIdx = now.getDay();
+    const hours = storeHours[todayIdx];
     if (!hours) {
-      const next = getNextOpenTime(now)
-      if (!next) return 'Closed'
-      const isTomorrow = next.dayIndex === (todayIdx + 1) % 7
-      const when = isTomorrow ? 'tomorrow' : 'soon'
-      return `Closed ⋅ Opens ${when} at ${formatHour(next.hour)}`
+      const next = getNextOpenTime(now);
+      if (!next) return "Closed";
+      const isTomorrow = next.dayIndex === (todayIdx + 1) % 7;
+      const when = isTomorrow ? "tomorrow" : "soon";
+      return `Closed ⋅ Opens ${when} at ${formatHour(next.hour)}`;
     }
-    const currentHour = now.getHours() + now.getMinutes() / 60
+    const currentHour = now.getHours() + now.getMinutes() / 60;
     if (currentHour >= hours.open && currentHour < hours.close) {
-      return `Open ⋅ Closes ${formatHour(hours.close)}`
+      return `Open ⋅ Closes ${formatHour(hours.close)}`;
     }
     // Not open now → find next opening
-    const next = getNextOpenTime(now)
-    if (!next) return 'Closed'
-    const isToday = next.dayIndex === todayIdx
-    const isTomorrow = next.dayIndex === (todayIdx + 1) % 7
-    const when = isToday ? 'today' : isTomorrow ? 'tomorrow' : 'soon'
-    return `Closed ⋅ Opens ${when} at ${formatHour(next.hour)}`
-  }
+    const next = getNextOpenTime(now);
+    if (!next) return "Closed";
+    const isToday = next.dayIndex === todayIdx;
+    const isTomorrow = next.dayIndex === (todayIdx + 1) % 7;
+    const when = isToday ? "today" : isTomorrow ? "tomorrow" : "soon";
+    return `Closed ⋅ Opens ${when} at ${formatHour(next.hour)}`;
+  };
 
   useEffect(() => {
-    const update = () => setStoreStatus(computeStoreStatus(new Date()))
-    update()
-    const id = setInterval(update, 60 * 1000)
-    return () => clearInterval(id)
-  }, [])
+    const update = () => setStoreStatus(computeStoreStatus(new Date()));
+    update();
+    const id = setInterval(update, 60 * 1000);
+    return () => clearInterval(id);
+  }, []);
 
   const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'About Us', href: '/about' },
-    { name: 'Services', href: '/services' },
-    { name: 'Brands', href: '/brands' },
-    { name: 'Products', href: '/products' },
-    { name: 'Reviews', href: '/reviews' },
-    { name: 'Contact', href: '/contact' },
-  ]
+    { name: "Home", href: "/" },
+    { name: "About Us", href: "/about" },
+    { name: "Services", href: "/services" },
+    { name: "Brands", href: "/brands" },
+    { name: "Products", href: "/products" },
+    { name: "Reviews", href: "/reviews" },
+    { name: "Contact", href: "/contact" },
+  ];
 
   return (
     <>
@@ -101,7 +104,10 @@ const Header = () => {
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-1">
                 <Phone className="h-4 w-4" />
-                <a href="tel:+923005888776" className="hover:text-primary-300 transition-colors">
+                <a
+                  href="tel:+923005888776"
+                  className="hover:text-primary-300 transition-colors"
+                >
                   0300 5888776
                 </a>
               </div>
@@ -112,16 +118,18 @@ const Header = () => {
             </div>
             <div className="flex items-center space-x-1">
               <Clock className="h-4 w-4" />
-              <span>{storeStatus || 'Checking hours…'}</span>
+              <span>{storeStatus || "Checking hours…"}</span>
             </div>
           </div>
         </div>
       </div>
 
       {/* Main Header */}
-      <header className={`sticky top-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-lg' : 'bg-white shadow-sm'
-      }`}>
+      <header
+        className={`sticky top-0 z-50 transition-all duration-300 ${
+          isScrolled ? "bg-white shadow-lg" : "bg-white shadow-sm"
+        }`}
+      >
         <div className="container-max">
           <div className="flex items-center justify-between py-4">
             {/* Logo */}
@@ -130,7 +138,9 @@ const Header = () => {
                 <span className="text-white font-bold text-xl">Z</span>
               </div>
               <div>
-                <h1 className="text-xl font-bold text-gray-900">Zaman Tyres Trader</h1>
+                <h1 className="text-xl font-bold text-gray-900">
+                  Zaman Tyres Trader
+                </h1>
                 <p className="text-sm text-gray-600">Wah Cantt, Pakistan</p>
               </div>
             </Link>
@@ -150,10 +160,7 @@ const Header = () => {
 
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">
-              <a
-                href="tel:+923005888776"
-                className="btn-primary"
-              >
+              <a href="tel:+923005888776" className="btn-primary">
                 Call Now
               </a>
               <a
@@ -217,7 +224,7 @@ const Header = () => {
         </div>
       </header>
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
