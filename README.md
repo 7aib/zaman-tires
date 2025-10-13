@@ -131,7 +131,7 @@ Replace placeholder images in the `public` folder:
 Create a `.env.local` file:
 
 ```env
-NEXT_PUBLIC_SITE_URL=https://zaman-tyre-trader.com
+NEXT_PUBLIC_SITE_URL=https://zamantyretrader.com
 NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your_google_maps_api_key
 NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=your_ga_id
 ```

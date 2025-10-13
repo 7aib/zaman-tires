@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/private/", "/admin/"],
     },
-    sitemap: "https://zaman-tyre-trader.com/sitemap.xml",
+    sitemap: "https://zamantyretrader.com/sitemap.xml",
   };
 }

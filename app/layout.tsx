@@ -8,7 +8,7 @@ import FloatingCallButton from "@/components/FloatingCallButton";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("http://localhost:3000"),
+  metadataBase: new URL("https://zamantyretrader.com"),
   title: {
     default: "Zaman Tyre Trader - Best Tire Shop in Wah Cantt, Pakistan",
     template: "%s | Zaman tyre Trader",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://zaman-tyre-trader.com",
+    url: "https://zamantyretrader.com",
     title: "Zaman tyre Trader - Best Tire Shop in Wah Cantt, Pakistan",
     description:
       "Leading tire shop in Wah Cantt offering premium tires, rims, wheel alignment, and automotive services. 90+ tire brands including Yokohama, Dunlop, Michelin.",
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
     google: "your-google-verification-code",
   },
   alternates: {
-    canonical: "https://zaman-tyre-trader.com",
+    canonical: "https://zamantyretrader.com",
   },
 };
 
@@ -85,7 +85,7 @@ const jsonLd = {
   name: "Zaman tyre Trader",
   description:
     "Leading tire shop in Wah Cantt offering premium tires, rims, wheel alignment, and automotive services",
-  url: "https://zaman-tyre-trader.com",
+  url: "http://zamantyretrader.com",
   telephone: "+92-300-5888776",
   address: {
     "@type": "PostalAddress",
