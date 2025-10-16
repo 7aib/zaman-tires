@@ -176,12 +176,15 @@ NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=your_ga_id
 ## 📄 License
 
 This project is licensed under the MIT License.
+## 🆘 Deployed 
+ - https://zamantyretrader.com/
+
 
 ## 🆘 Support
 
 For support or questions:
 
-- Email: info@zamantyre.com
+- Email: contact@zamantyre.com
 - Phone: 0300 5888776
 - Visit: GT Rd, Cantt, Wah, Pakistan
 
