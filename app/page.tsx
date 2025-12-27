@@ -27,7 +27,7 @@ export default function Home() {
       <BrandsSection />
       <WhyChooseUs />
       <TestimonialsSection />
-      <CTASection />
+      {/* <CTASection /> */}
     </>
   );
 }

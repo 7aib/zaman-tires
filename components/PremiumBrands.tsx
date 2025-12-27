@@ -56,7 +56,7 @@ const PremiumBrands = () => {
   ]
 
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-gray-900">
       <div className="container-max">
         {/* Section Header */}
         <motion.div
@@ -66,10 +66,10 @@ const PremiumBrands = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-300 mb-6">
             Premium <span className="text-primary-600">International Brands</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-500 max-w-3xl mx-auto leading-relaxed">
             World-renowned tire manufacturers known for their innovation, quality, 
             and performance. These premium brands represent the pinnacle of tire technology.
           </p>
@@ -84,17 +84,17 @@ const PremiumBrands = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-gray-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group"
+              className="bg-gray-800 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group"
             >
               {/* Brand Logo & Info */}
               <div className="text-center mb-6">
                 <div className={`w-20 h-20 ${brand.color} rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <span className="text-white font-bold text-2xl">{brand.logo}</span>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">{brand.name}</h3>
+                <h3 className="text-2xl font-bold text-gray-300 mb-2">{brand.name}</h3>
                 <div className="flex items-center justify-center space-x-2 mb-3">
                   <Globe className="h-4 w-4 text-gray-500" />
-                  <span className="text-sm text-gray-600">{brand.origin}</span>
+                  <span className="text-sm text-gray-400">{brand.origin}</span>
                 </div>
                 <div className="flex items-center justify-center space-x-1">
                   {[...Array(5)].map((_, i) => (
@@ -105,19 +105,19 @@ const PremiumBrands = () => {
               </div>
 
               {/* Description */}
-              <p className="text-gray-600 leading-relaxed mb-6 text-center">
+              <p className="text-gray-500 leading-relaxed mb-6 text-center">
                 {brand.description}
               </p>
 
               {/* Features */}
               <div className="space-y-2">
-                <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
+                <h4 className="font-semibold text-gray-300 mb-3 flex items-center">
                   <Award className="h-4 w-4 text-primary-600 mr-2" />
                   Key Features
                 </h4>
                 <ul className="space-y-2">
                   {brand.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-600">
+                    <li key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-500">
                       <div className="w-1.5 h-1.5 bg-primary-600 rounded-full" />
                       <span>{feature}</span>
                     </li>
@@ -126,7 +126,7 @@ const PremiumBrands = () => {
               </div>
 
               {/* Availability Badge */}
-              <div className="mt-6 pt-4 border-t border-gray-200">
+              <div className="mt-6 pt-4 border-t border-gray-700">
                 <div className="flex items-center justify-center space-x-2">
                   <Shield className="h-4 w-4 text-green-600" />
                   <span className="text-sm font-semibold text-green-600">Available in Stock</span>
@@ -142,9 +142,9 @@ const PremiumBrands = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="mt-16 bg-gradient-to-r from-primary-50 to-blue-50 rounded-2xl p-8 md:p-12"
+          className="mt-16 bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl p-8 md:p-12"
         >
-          <h3 className="text-3xl font-bold text-gray-900 text-center mb-8">
+          <h3 className="text-3xl font-bold text-gray-300 text-center mb-8">
             Why Choose Premium Brands?
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -152,29 +152,29 @@ const PremiumBrands = () => {
               <div className="w-16 h-16 bg-primary-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <Award className="h-8 w-8 text-white" />
               </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">Superior Quality</h4>
-              <p className="text-gray-600 text-sm">Premium materials and manufacturing standards ensure long-lasting performance.</p>
+              <h4 className="text-lg font-semibold text-gray-300 mb-2">Superior Quality</h4>
+              <p className="text-gray-500 text-sm">Premium materials and manufacturing standards ensure long-lasting performance.</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-primary-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <Shield className="h-8 w-8 text-white" />
               </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">Safety First</h4>
-              <p className="text-gray-600 text-sm">Advanced safety features and rigorous testing for maximum protection.</p>
+              <h4 className="text-lg font-semibold text-gray-300 mb-2">Safety First</h4>
+              <p className="text-gray-500 text-sm">Advanced safety features and rigorous testing for maximum protection.</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-primary-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <Globe className="h-8 w-8 text-white" />
               </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">Global Recognition</h4>
-              <p className="text-gray-600 text-sm">Trusted by millions of drivers worldwide with proven track records.</p>
+              <h4 className="text-lg font-semibold text-gray-300 mb-2">Global Recognition</h4>
+              <p className="text-gray-500 text-sm">Trusted by millions of drivers worldwide with proven track records.</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-primary-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <Star className="h-8 w-8 text-white" />
               </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">Innovation</h4>
-              <p className="text-gray-600 text-sm">Cutting-edge technology and continuous innovation in tire design.</p>
+              <h4 className="text-lg font-semibold text-gray-300 mb-2">Innovation</h4>
+              <p className="text-gray-500 text-sm">Cutting-edge technology and continuous innovation in tire design.</p>
             </div>
           </div>
         </motion.div>

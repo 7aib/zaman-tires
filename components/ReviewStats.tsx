@@ -40,7 +40,7 @@ const ReviewStats = () => {
   ]
 
   return (
-    <section className="section-padding bg-gray-50">
+    <section className="section-padding bg-black">
       <div className="container-max">
         {/* Section Header */}
         <motion.div
@@ -50,10 +50,10 @@ const ReviewStats = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-300 mb-6">
             Review <span className="text-primary-600">Statistics</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
             Detailed breakdown of our customer reviews and ratings. 
             See how we perform across different aspects of our service.
           </p>
@@ -66,18 +66,18 @@ const ReviewStats = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="bg-white rounded-2xl shadow-lg p-8"
+            className="bg-gray-900 rounded-2xl shadow-lg p-8"
           >
-            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Overall Rating</h3>
+            <h3 className="text-2xl font-bold text-gray-300 mb-8 text-center">Overall Rating</h3>
             
             <div className="text-center mb-8">
               <div className="text-6xl font-bold text-primary-600 mb-2">4.0</div>
               <div className="flex justify-center mb-4">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className={`h-8 w-8 ${i < 4 ? 'text-yellow-400 fill-current' : 'text-gray-300'}`} />
+                  <Star key={i} className={`h-8 w-8 ${i < 4 ? 'text-yellow-400 fill-current' : 'text-gray-700'}`} />
                 ))}
               </div>
-              <p className="text-gray-600">Based on 62 customer reviews</p>
+              <p className="text-gray-400">Based on 62 customer reviews</p>
             </div>
 
             {/* Rating Breakdown */}
@@ -85,16 +85,16 @@ const ReviewStats = () => {
               {ratingBreakdown.map((rating, index) => (
                 <div key={rating.stars} className="flex items-center space-x-4">
                   <div className="flex items-center space-x-1 w-16">
-                    <span className="text-sm font-medium text-gray-700">{rating.stars}</span>
-                    <Star className="h-4 w-4 text-gray-400 fill-current" />
+                    <span className="text-sm font-medium text-gray-400">{rating.stars}</span>
+                    <Star className="h-4 w-4 text-gray-600 fill-current" />
                   </div>
-                  <div className="flex-1 bg-gray-200 rounded-full h-3">
+                  <div className="flex-1 bg-gray-700 rounded-full h-3">
                     <div 
                       className="bg-primary-600 h-3 rounded-full transition-all duration-1000"
                       style={{ width: `${rating.percentage}%` }}
                     />
                   </div>
-                  <div className="text-sm text-gray-600 w-16 text-right">
+                  <div className="text-sm text-gray-400 w-16 text-right">
                     {rating.count} ({rating.percentage}%)
                   </div>
                 </div>
@@ -108,9 +108,9 @@ const ReviewStats = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="bg-white rounded-2xl shadow-lg p-8"
+            className="bg-gray-900 rounded-2xl shadow-lg p-8"
           >
-            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Category Ratings</h3>
+            <h3 className="text-2xl font-bold text-gray-300 mb-8 text-center">Category Ratings</h3>
             
             <div className="space-y-6">
               {reviewCategories.map((category, index) => {
@@ -119,7 +119,7 @@ const ReviewStats = () => {
                   <div key={category.category} className="flex items-center justify-between">
                     <div className="flex items-center space-x-3">
                       <IconComponent className={`h-6 w-6 ${category.color}`} />
-                      <span className="font-semibold text-gray-900">{category.category}</span>
+                      <span className="font-semibold text-gray-300">{category.category}</span>
                     </div>
                     <div className="flex items-center space-x-2">
                       <div className="flex">

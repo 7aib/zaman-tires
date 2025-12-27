@@ -71,7 +71,7 @@ const OurStory = () => {
   ];
 
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-black">
       <div className="container-max">
         {/* Section Header */}
         <motion.div
@@ -81,10 +81,10 @@ const OurStory = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-300 mb-6">
             Our <span className="text-primary-600">Story</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
             From humble beginnings to becoming Wah Cantt's most trusted tire
             shop, our journey has been driven by a commitment to quality and
             customer satisfaction.

@@ -105,7 +105,7 @@ const GoogleReviews = () => {
   };
 
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-black">
       <div className="container-max">
         {/* Section Header */}
         <motion.div
@@ -115,10 +115,10 @@ const GoogleReviews = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-300 mb-6">
             Customer <span className="text-primary-600">Reviews</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
             Real reviews from our satisfied customers. Read what people are
             saying about their experience with Zaman tyre Trader.
           </p>
@@ -133,7 +133,7 @@ const GoogleReviews = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300 relative"
+              className="bg-gray-900 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300 relative"
             >
               {/* Quote Icon */}
               <div className="absolute top-4 right-4 text-primary-200">

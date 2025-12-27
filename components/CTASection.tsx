@@ -29,7 +29,7 @@ const CTASection = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-16">
             <a
               href="tel:+923005888776"
-              className="bg-white text-primary-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl flex items-center space-x-3 text-lg"
+              className="bg-gray-800 text-gray-300 hover:bg-gray-700 font-semibold py-4 px-8 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl flex items-center space-x-3 text-lg"
             >
               <Phone className="h-6 w-6" />
               <span>Call Now: 0300 5888776</span>

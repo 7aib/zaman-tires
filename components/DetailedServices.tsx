@@ -229,7 +229,7 @@ const DetailedServices = () => {
   ];
 
   return (
-    <section className="section-padding bg-gray-50">
+    <section className="section-padding bg-black">
       <div className="container-max">
         {/* Section Header */}
         <motion.div
@@ -239,10 +239,10 @@ const DetailedServices = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Our <span className="text-primary-600">Services</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-300 mb-6">
+            Detailed <span className="text-primary-600">Service Guide</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
             Comprehensive automotive services designed to keep your vehicle
             running smoothly, safely, and efficiently. Each service is performed
             by certified professionals using premium equipment.
@@ -260,7 +260,7 @@ const DetailedServices = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-2xl shadow-lg overflow-hidden"
+                className="bg-gray-900 rounded-2xl shadow-lg overflow-hidden"
               >
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 p-8">
                   {/* Service Info */}
@@ -268,13 +268,13 @@ const DetailedServices = () => {
                     <div className="w-16 h-16 bg-primary-600 rounded-xl flex items-center justify-center mb-6">
                       <IconComponent className="h-8 w-8 text-white" />
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                    <h3 className="text-2xl font-bold text-gray-300 mb-2">
                       {service.title}
                     </h3>
                     <p className="text-primary-600 font-semibold mb-4">
                       {service.subtitle}
                     </p>
-                    <p className="text-gray-600 leading-relaxed mb-6">
+                    <p className="text-gray-400 leading-relaxed mb-6">
                       {service.description}
                     </p>
 

@@ -20,7 +20,7 @@ const BrandsSection = () => {
   ];
 
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-gray-900">
       <div className="container-max">
         {/* Section Header */}
         <motion.div
@@ -30,10 +30,10 @@ const BrandsSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-300 mb-6">
             Premium <span className="text-primary-600">Tire Brands</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-500 max-w-3xl mx-auto leading-relaxed">
             We stock over 90+ tire brands including world-renowned
             manufacturers. From premium imported tires to quality Chinese
             brands, we have it all.
@@ -51,7 +51,7 @@ const BrandsSection = () => {
               viewport={{ once: true }}
               className="group"
             >
-              <div className="bg-gray-50 rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group-hover:bg-white">
+              <div className="bg-gray-800 rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group-hover:bg-gray-700">
                 <div
                   className={`w-16 h-16 ${brand.color} rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}
                 >
@@ -59,7 +59,7 @@ const BrandsSection = () => {
                     {brand.logo}
                   </span>
                 </div>
-                <h3 className="font-semibold text-gray-900 text-sm">
+                <h3 className="font-semibold text-gray-300 text-sm">
                   {brand.name}
                 </h3>
               </div>
@@ -75,31 +75,31 @@ const BrandsSection = () => {
           viewport={{ once: true }}
           className="text-center"
         >
-          <div className="bg-gradient-to-r from-primary-50 to-blue-50 rounded-2xl p-8 md:p-12">
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <div className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl p-8 md:p-12">
+            <h3 className="text-3xl md:text-4xl font-bold text-gray-300 mb-4">
               90+ Tire Brands Available
             </h3>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
               From premium international brands to quality local manufacturers,
               we have the perfect tire for every vehicle and budget.
             </p>
 
             {/* Brand Categories */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 max-w-4xl mx-auto">
-              <div className="bg-white rounded-xl p-6 shadow-sm">
-                <h4 className="text-lg font-semibold text-gray-900 mb-3">
+              <div className="bg-gray-700 rounded-xl p-6 shadow-sm">
+                <h4 className="text-lg font-semibold text-gray-300 mb-3">
                   Premium Brands
                 </h4>
-                <p className="text-gray-600 text-sm">
+                <p className="text-gray-500 text-sm">
                   Premium international tire manufacturers including Yokohama,
                   Dunlop, Michelin, Goodyear, Bridgestone, and many more.
                 </p>
               </div>
-              <div className="bg-white rounded-xl p-6 shadow-sm">
-                <h4 className="text-lg font-semibold text-gray-900 mb-3">
+              <div className="bg-gray-700 rounded-xl p-6 shadow-sm">
+                <h4 className="text-lg font-semibold text-gray-300 mb-3">
                   Chinese Brands
                 </h4>
-                <p className="text-gray-600 text-sm">
+                <p className="text-gray-500 text-sm">
                   Quality Chinese tire brands offering excellent value for
                   money. Perfect for budget-conscious customers without
                   compromising on quality.

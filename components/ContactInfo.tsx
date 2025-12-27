@@ -36,7 +36,7 @@ const ContactInfo = () => {
   ]
 
   return (
-    <section className="section-padding bg-gray-50">
+    <section className="section-padding bg-gray-900">
       <div className="container-max">
         {/* Section Header */}
         <motion.div
@@ -46,10 +46,10 @@ const ContactInfo = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-300 mb-6">
             Contact <span className="text-primary-600">Information</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-500 max-w-3xl mx-auto leading-relaxed">
             Multiple ways to reach us. Choose the method that's most convenient for you. 
             We're here to help with all your tire and automotive service needs.
           </p>
@@ -66,7 +66,7 @@ const ContactInfo = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 text-center"
+                className="bg-gray-800 rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 text-center"
               >
                 {/* Icon */}
                 <div className="w-16 h-16 bg-primary-600 rounded-xl flex items-center justify-center mx-auto mb-4">
@@ -74,17 +74,17 @@ const ContactInfo = () => {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{detail.title}</h3>
+                <h3 className="text-xl font-bold text-gray-300 mb-3">{detail.title}</h3>
 
                 {/* Details */}
                 <div className="space-y-1 mb-4">
                   {detail.details.map((item, itemIndex) => (
-                    <p key={itemIndex} className="text-gray-700 font-medium">{item}</p>
+                    <p key={itemIndex} className="text-gray-400 font-medium">{item}</p>
                   ))}
                 </div>
 
                 {/* Description */}
-                <p className="text-gray-600 text-sm leading-relaxed mb-6">{detail.description}</p>
+                <p className="text-gray-500 text-sm leading-relaxed mb-6">{detail.description}</p>
 
                 {/* Action Button */}
                 {detail.action && (
@@ -134,7 +134,7 @@ const ContactInfo = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
               <a
                 href="tel:+923005888776"
-                className="bg-white text-primary-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-colors duration-200 text-lg"
+                className="bg-gray-800 text-gray-300 hover:bg-gray-700 font-semibold py-4 px-8 rounded-lg transition-colors duration-200 text-lg"
               >
                 Call: 0300 5888776
               </a>

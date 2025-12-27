@@ -113,7 +113,7 @@ const NewVsOldTires = () => {
   ]
 
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-black">
       <div className="container-max">
         {/* Section Header */}
         <motion.div
@@ -123,10 +123,10 @@ const NewVsOldTires = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-300 mb-6">
             New vs <span className="text-primary-600">Used Tires</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
             Understanding the differences between new and used tires to help you make 
             the best decision for your vehicle, budget, and driving needs.
           </p>
@@ -140,14 +140,14 @@ const NewVsOldTires = () => {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <div className="bg-gray-50 rounded-2xl p-8 overflow-hidden">
-            <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">Detailed Comparison</h3>
+          <div className="bg-gray-900 rounded-2xl p-8 overflow-hidden">
+            <h3 className="text-2xl font-bold text-gray-300 text-center mb-8">Detailed Comparison</h3>
             
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
               {/* Feature Column */}
               <div className="lg:col-span-1">
-                <div className="bg-white rounded-xl p-6 shadow-sm">
-                  <h4 className="font-semibold text-gray-900 mb-6 text-center">Features</h4>
+                <div className="bg-gray-800 rounded-xl p-6 shadow-sm">
+                  <h4 className="font-semibold text-gray-300 mb-6 text-center">Features</h4>
                   <div className="space-y-6">
                     {comparison.map((item, index) => (
                       <div key={index} className="flex items-center justify-center">
@@ -270,7 +270,7 @@ const NewVsOldTires = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+                  className="bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
                 >
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-primary-600 rounded-xl flex items-center justify-center flex-shrink-0">

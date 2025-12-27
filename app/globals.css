@@ -10,21 +10,21 @@
   }
   
   body {
-    @apply bg-white text-gray-900 antialiased;
+    @apply bg-black text-gray-400 antialiased;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+    @apply bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2;
   }
   
   .btn-secondary {
-    @apply bg-white hover:bg-gray-50 text-primary-600 font-semibold py-3 px-6 rounded-lg border border-primary-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+    @apply bg-gray-800 hover:bg-gray-700 text-gray-300 font-semibold py-3 px-6 rounded-lg border border-gray-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2;
   }
   
   .btn-accent {
-    @apply bg-accent-600 hover:bg-accent-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2;
+    @apply bg-gray-800 hover:bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2;
   }
   
   .section-padding {
@@ -36,11 +36,11 @@
   }
   
   .gradient-bg {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);
   }
   
   .hero-gradient {
-    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #60a5fa 100%);
+    background: linear-gradient(135deg, #111111 0%, #333333 50%, #555555 100%);
   }
   
   .card-hover {
@@ -56,4 +56,76 @@
   .text-shadow-lg {
     text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
+}
+
+/* Tire Animation */
+@keyframes tire-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes tire-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes tire-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.tire-spin {
+  animation: tire-spin 2s linear infinite;
+}
+
+.tire-bounce {
+  animation: tire-bounce 0.6s ease-in-out infinite;
+}
+
+.tire-pulse {
+  animation: tire-pulse 2s ease-in-out infinite;
+}
+
+.tire-icon {
+  width: 60px;
+  height: 60px;
+  background: conic-gradient(from 0deg, #dc2626 0deg 90deg, #1f2937 90deg 180deg, #dc2626 180deg 270deg, #1f2937 270deg);
+  border-radius: 50%;
+  position: relative;
+}
+
+.tire-icon::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #1f2937;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.tire-icon::after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 3px solid #dc2626;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

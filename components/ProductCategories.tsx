@@ -68,7 +68,7 @@ const ProductCategories = () => {
   ];
 
   return (
-    <section className="section-padding bg-gray-50">
+    <section className="section-padding bg-gray-900">
       <div className="container-max">
         {/* Section Header */}
         <motion.div
@@ -78,10 +78,10 @@ const ProductCategories = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-300 mb-6">
             Tire <span className="text-primary-600">Categories</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-500 max-w-3xl mx-auto leading-relaxed">
             Specialized tire solutions for different vehicle types. Each
             category is designed to meet specific performance requirements and
             driving conditions.
@@ -212,20 +212,20 @@ const ProductCategories = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="mt-16 bg-white rounded-2xl p-8 md:p-12 shadow-lg"
+          className="mt-16 bg-gray-900 rounded-2xl p-8 md:p-12 shadow-lg"
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              <h3 className="text-2xl font-bold text-gray-300 mb-4">
                 Need Help Choosing?
               </h3>
-              <p className="text-gray-600 mb-6">
+              <p className="text-gray-400 mb-6">
                 Our expert team can help you select the perfect tires for your
                 vehicle. We consider your driving habits, vehicle
                 specifications, and budget to recommend the best options.
               </p>
               <ul className="space-y-2">
-                <li className="flex items-center space-x-2 text-gray-600">
+                <li className="flex items-center space-x-2 text-gray-400">
                   <Shield className="h-4 w-4 text-green-600" />
                   <span>Free consultation and recommendations</span>
                 </li>

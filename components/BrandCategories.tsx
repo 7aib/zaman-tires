@@ -62,7 +62,7 @@ const BrandCategories = () => {
   ];
 
   return (
-    <section className="section-padding bg-gray-50">
+    <section className="section-padding bg-gray-900">
       <div className="container-max">
         {/* Section Header */}
         <motion.div
@@ -72,10 +72,10 @@ const BrandCategories = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-300 mb-6">
             Brand <span className="text-primary-600">Categories</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-500 max-w-3xl mx-auto leading-relaxed">
             We offer two main categories of tire brands to meet different needs
             and budgets. Both categories provide quality tires with their own
             unique advantages.
@@ -101,7 +101,7 @@ const BrandCategories = () => {
                 />
 
                 <div
-                  className={`relative ${category.bgColor} rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300`}
+                  className={`relative ${category.bgColor === 'bg-blue-50' ? 'bg-gray-800' : 'bg-gray-800'} rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300`}
                 >
                   {/* Header */}
                   <div className="text-center mb-8">
@@ -111,18 +111,18 @@ const BrandCategories = () => {
                       <IconComponent className="h-10 w-10 text-white" />
                     </div>
                     <h3
-                      className={`text-3xl font-bold ${category.textColor} mb-3`}
+                      className={`text-3xl font-bold text-gray-300 mb-3`}
                     >
                       {category.title}
                     </h3>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-gray-500 leading-relaxed">
                       {category.description}
                     </p>
                   </div>
 
                   {/* Sample Brands */}
                   <div className="mb-8">
-                    <h4 className="font-semibold text-gray-900 mb-4 flex items-center">
+                    <h4 className="font-semibold text-gray-300 mb-4 flex items-center">
                       <Star className="h-5 w-5 text-primary-600 mr-2" />
                       Popular Brands
                     </h4>
@@ -130,9 +130,9 @@ const BrandCategories = () => {
                       {category.brands.map((brand, brandIndex) => (
                         <div
                           key={brandIndex}
-                          className="bg-white rounded-lg p-3 text-center shadow-sm"
+                          className="bg-gray-700 rounded-lg p-3 text-center shadow-sm"
                         >
-                          <span className="text-sm font-medium text-gray-700">
+                          <span className="text-sm font-medium text-gray-300">
                             {brand}
                           </span>
                         </div>
@@ -142,7 +142,7 @@ const BrandCategories = () => {
 
                   {/* Features */}
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-4 flex items-center">
+                    <h4 className="font-semibold text-gray-300 mb-4 flex items-center">
                       <Award className="h-5 w-5 text-primary-600 mr-2" />
                       Key Features
                     </h4>
@@ -150,7 +150,7 @@ const BrandCategories = () => {
                       {category.features.map((feature, featureIndex) => (
                         <li
                           key={featureIndex}
-                          className="flex items-start space-x-2 text-sm text-gray-600"
+                          className="flex items-start space-x-2 text-sm text-gray-500"
                         >
                           <div className="w-1.5 h-1.5 bg-primary-600 rounded-full mt-2 flex-shrink-0" />
                           <span>{feature}</span>
@@ -180,22 +180,22 @@ const BrandCategories = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="mt-16 bg-white rounded-2xl p-8 md:p-12 shadow-lg"
+          className="mt-16 bg-gray-800 rounded-2xl p-8 md:p-12 shadow-lg"
         >
-          <h3 className="text-3xl font-bold text-gray-900 text-center mb-8">
+          <h3 className="text-3xl font-bold text-gray-300 text-center mb-8">
             Which Category is Right for You?
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-4">
-              <h4 className="text-xl font-semibold text-gray-900 mb-4">
+              <h4 className="text-xl font-semibold text-gray-300 mb-4">
                 Choose Premium Brands If:
               </h4>
               <ul className="space-y-2">
-                <li className="flex items-start space-x-2 text-gray-600">
+                <li className="flex items-start space-x-2 text-gray-500">
                   <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-2 flex-shrink-0" />
                   <span>You prioritize maximum performance and quality</span>
                 </li>
-                <li className="flex items-start space-x-2 text-gray-600">
+                <li className="flex items-start space-x-2 text-gray-500">
                   <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-2 flex-shrink-0" />
                   <span>You want the latest technology and innovation</span>
                 </li>

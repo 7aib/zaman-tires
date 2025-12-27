@@ -131,8 +131,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="static/logo.jgp" type="image/png" />
-        <link rel="apple-touch-icon" href="static/logo.jpg" />
+        <link
+          rel="icon"
+          href="https://www.zamantyretrader.com/static/logo.jpg"
+          type="image/jpeg"
+        />
+        <link
+          rel="apple-touch-icon"
+          href="https://www.zamantyretrader.com/static/logo.jpg"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

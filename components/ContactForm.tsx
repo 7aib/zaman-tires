@@ -60,7 +60,7 @@ const ContactForm = () => {
   ]
 
   return (
-    <section className="bg-white p-8 md:p-12">
+    <section className="bg-gray-900 p-8 md:p-12">
       <div className="max-w-2xl mx-auto">
         <motion.div
           initial={{ opacity: 0, x: -30 }}
@@ -68,10 +68,10 @@ const ContactForm = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-300 mb-6">
             Send Us a <span className="text-primary-600">Message</span>
           </h2>
-          <p className="text-gray-600 mb-8 leading-relaxed">
+          <p className="text-gray-500 mb-8 leading-relaxed">
             Have questions about our services or need a quote? Fill out the form below 
             and we'll get back to you as soon as possible.
           </p>
@@ -79,7 +79,7 @@ const ContactForm = () => {
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Name */}
             <div>
-              <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
+              <label htmlFor="name" className="block text-sm font-semibold text-gray-300 mb-2">
                 Full Name *
               </label>
               <input
@@ -89,14 +89,14 @@ const ContactForm = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
+                className="w-full px-4 py-3 border border-gray-600 rounded-lg bg-gray-800 text-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
                 placeholder="Enter your full name"
               />
             </div>
 
             {/* Phone */}
             <div>
-              <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
+              <label htmlFor="phone" className="block text-sm font-semibold text-gray-300 mb-2">
                 Phone Number *
               </label>
               <input
@@ -106,14 +106,14 @@ const ContactForm = () => {
                 value={formData.phone}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
+                className="w-full px-4 py-3 border border-gray-600 rounded-lg bg-gray-800 text-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
                 placeholder="0300 1234567"
               />
             </div>
 
             {/* Email */}
             <div>
-              <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
+              <label htmlFor="email" className="block text-sm font-semibold text-gray-300 mb-2">
                 Email Address
               </label>
               <input
@@ -122,14 +122,14 @@ const ContactForm = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
+                className="w-full px-4 py-3 border border-gray-600 rounded-lg bg-gray-800 text-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
                 placeholder="your.email@example.com"
               />
             </div>
 
             {/* Service */}
             <div>
-              <label htmlFor="service" className="block text-sm font-semibold text-gray-700 mb-2">
+              <label htmlFor="service" className="block text-sm font-semibold text-gray-300 mb-2">
                 Service Needed *
               </label>
               <select
@@ -138,7 +138,7 @@ const ContactForm = () => {
                 value={formData.service}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
+                className="w-full px-4 py-3 border border-gray-600 rounded-lg bg-gray-800 text-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
               >
                 <option value="">Select a service</option>
                 {services.map((service) => (
@@ -151,7 +151,7 @@ const ContactForm = () => {
 
             {/* Message */}
             <div>
-              <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
+              <label htmlFor="message" className="block text-sm font-semibold text-gray-300 mb-2">
                 Message *
               </label>
               <textarea
@@ -161,7 +161,7 @@ const ContactForm = () => {
                 onChange={handleChange}
                 required
                 rows={5}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors resize-none"
+                className="w-full px-4 py-3 border border-gray-600 rounded-lg bg-gray-800 text-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors resize-none"
                 placeholder="Tell us about your tire needs, vehicle details, or any specific requirements..."
               />
             </div>
@@ -171,7 +171,7 @@ const ContactForm = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-primary-600 hover:bg-primary-700 disabled:bg-gray-400 text-white font-semibold py-4 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2"
+                className="w-full bg-primary-600 hover:bg-primary-700 disabled:bg-gray-600 text-white font-semibold py-4 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2"
               >
                 {isSubmitting ? (
                   <>
@@ -192,10 +192,10 @@ const ContactForm = () => {
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="bg-green-50 border border-green-200 rounded-lg p-4 flex items-center space-x-3"
+                className="bg-green-900 border border-green-700 rounded-lg p-4 flex items-center space-x-3"
               >
-                <CheckCircle className="h-5 w-5 text-green-600" />
-                <p className="text-green-800">
+                <CheckCircle className="h-5 w-5 text-green-400" />
+                <p className="text-green-300">
                   Thank you! Your message has been sent successfully. We'll get back to you soon.
                 </p>
               </motion.div>
@@ -205,10 +205,10 @@ const ContactForm = () => {
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="bg-red-50 border border-red-200 rounded-lg p-4 flex items-center space-x-3"
+                className="bg-red-900 border border-red-700 rounded-lg p-4 flex items-center space-x-3"
               >
-                <AlertCircle className="h-5 w-5 text-red-600" />
-                <p className="text-red-800">
+                <AlertCircle className="h-5 w-5 text-red-400" />
+                <p className="text-red-300">
                   Sorry, there was an error sending your message. Please try calling us directly.
                 </p>
               </motion.div>

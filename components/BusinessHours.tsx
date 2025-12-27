@@ -29,7 +29,7 @@ const BusinessHours = () => {
   ];
 
   return (
-    <section className="section-padding bg-gray-50">
+    <section className="section-padding bg-gray-900">
       <div className="container-max">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -38,10 +38,10 @@ const BusinessHours = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-300 mb-6">
             Business <span className="text-primary-600">Hours</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-500 max-w-3xl mx-auto leading-relaxed">
             We're open 6 days a week to serve you better. Extended hours ensure
             you can get your tire services when it's most convenient for you.
           </p>
@@ -55,14 +55,14 @@ const BusinessHours = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="bg-white rounded-2xl shadow-lg p-8"
+              className="bg-gray-800 rounded-2xl shadow-lg p-8"
             >
               <div className="flex items-center space-x-3 mb-6">
                 <div className="w-12 h-12 bg-primary-600 rounded-lg flex items-center justify-center">
                   <Clock className="h-6 w-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900">
+                  <h3 className="text-2xl font-bold text-gray-300">
                     Operating Hours
                   </h3>
                   <p className={`text-lg font-semibold ${statusColor}`}>
@@ -77,16 +77,16 @@ const BusinessHours = () => {
                     key={day.day}
                     className="flex justify-between items-center py-3 border-b border-gray-100 last:border-b-0"
                   >
-                    <span className="font-semibold text-gray-900">
+                    <span className="font-semibold text-gray-300">
                       {day.day}
                     </span>
-                    <span className="text-gray-600">{day.hours}</span>
+                    <span className="text-gray-500">{day.hours}</span>
                   </div>
                 ))}
               </div>
 
-              <div className="mt-6 p-4 bg-primary-50 rounded-lg">
-                <p className="text-sm text-primary-800 text-center">
+              <div className="mt-6 p-4 bg-primary-900 rounded-lg">
+                <p className="text-sm text-primary-300 text-center">
                   <strong>Note:</strong> We're open every day including weekends
                   and public holidays to ensure you're never left stranded with
                   tire issues.
@@ -103,16 +103,16 @@ const BusinessHours = () => {
               className="space-y-8"
             >
               {/* Quick Contact */}
-              <div className="bg-white rounded-2xl shadow-lg p-8">
+              <div className="bg-gray-800 rounded-2xl shadow-lg p-8">
                 <div className="flex items-center space-x-3 mb-6">
                   <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">
                     <Phone className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-gray-900">
+                    <h3 className="text-2xl font-bold text-gray-300">
                       Quick Contact
                     </h3>
-                    <p className="text-gray-600">
+                    <p className="text-gray-500">
                       Call us anytime during business hours
                     </p>
                   </div>
@@ -122,7 +122,7 @@ const BusinessHours = () => {
                   <div className="flex items-center space-x-3">
                     <Phone className="h-5 w-5 text-primary-600" />
                     <div>
-                      <p className="font-semibold text-gray-900">Phone</p>
+                      <p className="font-semibold text-gray-300">Phone</p>
                       <a
                         href="tel:+923005888776"
                         className="text-primary-600 hover:text-primary-700"
@@ -135,8 +135,8 @@ const BusinessHours = () => {
                   <div className="flex items-center space-x-3">
                     <MapPin className="h-5 w-5 text-primary-600" />
                     <div>
-                      <p className="font-semibold text-gray-900">Address</p>
-                      <p className="text-gray-600">
+                      <p className="font-semibold text-gray-300">Address</p>
+                      <p className="text-gray-500">
                         GT Rd, Cantt, Wah, Pakistan
                       </p>
                     </div>
@@ -162,16 +162,16 @@ const BusinessHours = () => {
               </div>
 
               {/* Special Services */}
-              <div className="bg-white rounded-2xl shadow-lg p-8">
+              <div className="bg-gray-800 rounded-2xl shadow-lg p-8">
                 <div className="flex items-center space-x-3 mb-6">
                   <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center">
                     <Calendar className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-gray-900">
+                    <h3 className="text-2xl font-bold text-gray-300">
                       Special Services
                     </h3>
-                    <p className="text-gray-600">
+                    <p className="text-gray-500">
                       Additional convenience for our customers
                     </p>
                   </div>
@@ -181,10 +181,10 @@ const BusinessHours = () => {
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold text-gray-900">
+                      <h4 className="font-semibold text-gray-300">
                         Emergency Service
                       </h4>
-                      <p className="text-gray-600 text-sm">
+                      <p className="text-gray-500 text-sm">
                         Available for urgent tire issues
                       </p>
                     </div>
@@ -193,10 +193,10 @@ const BusinessHours = () => {
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold text-gray-900">
+                      <h4 className="font-semibold text-gray-300">
                         Appointment Booking
                       </h4>
-                      <p className="text-gray-600 text-sm">
+                      <p className="text-gray-500 text-sm">
                         Schedule your service in advance
                       </p>
                     </div>

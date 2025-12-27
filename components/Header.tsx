@@ -67,7 +67,7 @@ const Header = () => {
       {/* Main Header */}
       <header
         className={`sticky top-0 z-50 transition-all duration-300 ${
-          isScrolled ? "bg-white shadow-lg" : "bg-white shadow-sm"
+          isScrolled ? "bg-gray-900 shadow-lg" : "bg-gray-900 shadow-sm"
         }`}
       >
         <div className="container-max">
@@ -82,10 +82,10 @@ const Header = () => {
                 {/* <span className="text-white font-bold text-xl">Z</span> */}
               </div>
               <div>
-                <h1 className="text-xl font-bold text-gray-900">
+                <h1 className="text-xl font-bold text-gray-300">
                   Zaman Tyre Trader
                 </h1>
-                <p className="text-sm text-gray-600">Wah Cantt, Pakistan</p>
+                <p className="text-sm text-gray-500">Wah Cantt, Pakistan</p>
               </div>
             </Link>
 
@@ -95,7 +95,7 @@ const Header = () => {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200"
+                  className="text-gray-400 hover:text-primary-600 font-medium transition-colors duration-200"
                 >
                   {item.name}
                 </Link>
@@ -120,7 +120,7 @@ const Header = () => {
             {/* Mobile menu button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="lg:hidden p-2 rounded-md text-gray-700 hover:text-primary-600 hover:bg-gray-100 transition-colors"
+              className="lg:hidden p-2 rounded-md text-gray-400 hover:text-primary-600 hover:bg-gray-800 transition-colors"
             >
               {isMenuOpen ? (
                 <X className="h-6 w-6" />
@@ -132,19 +132,19 @@ const Header = () => {
 
           {/* Mobile Navigation */}
           {isMenuOpen && (
-            <div className="lg:hidden border-t border-gray-200 py-4">
+            <div className="lg:hidden border-t border-gray-700 py-4">
               <nav className="flex flex-col space-y-4">
                 {navigation.map((item) => (
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200 px-4 py-2"
+                    className="text-gray-400 hover:text-primary-600 font-medium transition-colors duration-200 px-4 py-2"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
                   </Link>
                 ))}
-                <div className="flex flex-col space-y-2 px-4 pt-4 border-t border-gray-200">
+                <div className="flex flex-col space-y-2 px-4 pt-4 border-t border-gray-700">
                   <a
                     href="tel:+923005888776"
                     className="btn-primary text-center"

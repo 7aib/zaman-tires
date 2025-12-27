@@ -32,7 +32,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-black text-gray-400">
       <div className="container-max section-padding">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -45,11 +45,11 @@ const Footer = () => {
                 {/* <span className="text-white font-bold text-lg">Z</span> */}
               </div>
               <div>
-                <h3 className="text-lg font-bold">Zaman tyre Trader</h3>
-                <p className="text-sm text-gray-400">Trusted Tire Shop</p>
+                <h3 className="text-lg font-bold text-gray-300">Zaman tyre Trader</h3>
+                <p className="text-sm text-gray-500">Trusted Tire Shop</p>
               </div>
             </div>
-            <p className="text-gray-300 text-sm leading-relaxed">
+            <p className="text-gray-400 text-sm leading-relaxed">
               Leading tire shop in Wah Cantt offering premium tires, rims, wheel
               alignment, and automotive services. Over 90+ tire brands
               available.
@@ -63,19 +63,19 @@ const Footer = () => {
                   />
                 ))}
               </div>
-              <span className="text-sm text-gray-300">4.0 (62 reviews)</span>
+              <span className="text-sm text-gray-400">4.0 (62 reviews)</span>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <h4 className="text-lg font-semibold mb-4 text-gray-300">Quick Links</h4>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors duration-200 text-sm"
+                    className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
                   >
                     {link.name}
                   </Link>
@@ -86,13 +86,13 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Our Services</h4>
+            <h4 className="text-lg font-semibold mb-4 text-gray-300">Our Services</h4>
             <ul className="space-y-2">
               {services.map((service) => (
                 <li key={service.name}>
                   <Link
                     href={service.href}
-                    className="text-gray-300 hover:text-white transition-colors duration-200 text-sm"
+                    className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
                   >
                     {service.name}
                   </Link>
@@ -103,14 +103,14 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
+            <h4 className="text-lg font-semibold mb-4 text-gray-300">Contact Info</h4>
             <div className="space-y-3">
               <div className="flex items-start space-x-3">
                 <Phone className="h-5 w-5 text-primary-400 mt-0.5 flex-shrink-0" />
                 <div>
                   <a
                     href="tel:+923005888776"
-                    className="text-gray-300 hover:text-white transition-colors duration-200 text-sm"
+                    className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
                   >
                     0300 5888776
                   </a>
@@ -123,7 +123,7 @@ const Footer = () => {
                     href="https://share.google/v8LnVtVICJoSqbK1Q"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-300 hover:text-white transition-colors duration-200 text-sm"
+                    className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
                   >
                     GT Rd, Cantt, Wah, Pakistan
                   </a>
@@ -132,7 +132,7 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <Clock className="h-5 w-5 text-primary-400 mt-0.5 flex-shrink-0" />
                 <div>
-                  <p className="text-gray-300 text-sm">
+                  <p className="text-gray-400 text-sm">
                     Mon - Sun: 9:00 AM - 9:00 PM
                   </p>
                 </div>
@@ -145,10 +145,10 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-center md:text-left">
-              <p className="text-gray-400 text-sm">
+              <p className="text-gray-500 text-sm">
                 © {currentYear} Zaman tyre Trader. All rights reserved.
               </p>
-              <p className="text-gray-500 text-xs mt-1">
+              <p className="text-gray-600 text-xs mt-1">
                 Leading tire shop in Wah Cantt, Pakistan
               </p>
             </div>

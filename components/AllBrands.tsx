@@ -65,7 +65,7 @@ const AllBrands = () => {
   })
 
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-gray-900">
       <div className="container-max">
         {/* Section Header */}
         <motion.div
@@ -75,10 +75,10 @@ const AllBrands = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-300 mb-6">
             Complete Brand <span className="text-primary-600">Collection</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-500 max-w-3xl mx-auto leading-relaxed">
             Browse our complete collection of 90+ tire brands. Use the search and filter options 
             to find the perfect brand for your needs.
           </p>
@@ -95,23 +95,23 @@ const AllBrands = () => {
           <div className="flex flex-col md:flex-row gap-4 max-w-4xl mx-auto">
             {/* Search */}
             <div className="relative flex-1">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-500" />
               <input
                 type="text"
                 placeholder="Search tire brands..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-3 border border-gray-600 rounded-lg bg-gray-800 text-gray-300 placeholder-gray-500 focus:ring-2 focus:ring-primary-500 focus:border-transparent"
               />
             </div>
 
             {/* Filter */}
             <div className="relative">
-              <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+              <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-500" />
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="pl-10 pr-8 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white"
+                className="pl-10 pr-8 py-3 border border-gray-600 rounded-lg bg-gray-800 text-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-transparent"
               >
                 {categories.map((category) => (
                   <option key={category.value} value={category.value}>
@@ -131,7 +131,7 @@ const AllBrands = () => {
           viewport={{ once: true }}
           className="text-center mb-8"
         >
-          <p className="text-gray-600">
+          <p className="text-gray-400">
             Showing <span className="font-semibold text-primary-600">{filteredBrands.length}</span> brands
             {searchTerm && ` matching "${searchTerm}"`}
             {selectedCategory !== 'all' && ` in ${categories.find(c => c.value === selectedCategory)?.label}`}
@@ -149,11 +149,11 @@ const AllBrands = () => {
               viewport={{ once: true }}
               className="group"
             >
-              <div className="bg-gray-50 rounded-xl p-4 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group-hover:bg-white">
+              <div className="bg-gray-800 rounded-xl p-4 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group-hover:bg-gray-700">
                 <div className={`w-12 h-12 ${brand.color} rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300`}>
                   <span className="text-white font-bold text-lg">{brand.logo}</span>
                 </div>
-                <h3 className="font-semibold text-gray-900 text-sm mb-1">{brand.name}</h3>
+                <h3 className="font-semibold text-gray-300 text-sm mb-1">{brand.name}</h3>
                 <p className="text-xs text-gray-500 mb-2">{brand.origin}</p>
                 
                 {/* Category Badge */}
@@ -183,11 +183,11 @@ const AllBrands = () => {
             viewport={{ once: true }}
             className="text-center py-12"
           >
-            <div className="text-gray-400 mb-4">
+            <div className="text-gray-500 mb-4">
               <Search className="h-16 w-16 mx-auto" />
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">No brands found</h3>
-            <p className="text-gray-600">
+            <h3 className="text-xl font-semibold text-gray-300 mb-2">No brands found</h3>
+            <p className="text-gray-500">
               Try adjusting your search terms or filters to find what you're looking for.
             </p>
           </motion.div>
