@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import { Star, MapPin, Phone, Award } from "lucide-react";
+import { googleReviews } from "@/utils/googleReviews";
 
 const AboutHero = () => {
   return (
@@ -41,7 +42,7 @@ const AboutHero = () => {
                 />
               ))}
             </div>
-            <span className="text-sm font-medium">4.0 Rating • 62 Reviews</span>
+            <span className="text-sm font-medium">{googleReviews.rating} Rating • {googleReviews.reviewCount} Reviews</span>
           </motion.div>
 
           {/* Main Headline */}

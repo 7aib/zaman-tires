@@ -38,7 +38,7 @@ const Header = () => {
   return (
     <>
       {/* Top Bar */}
-      <div className="bg-primary-900 text-white py-2 text-sm">
+      {/* <div className="bg-primary-900 text-white py-2 text-sm">
         <div className="container-max">
           <div className="flex flex-col sm:flex-row justify-between items-center space-y-1 sm:space-y-0">
             <div className="flex items-center space-x-4">
@@ -62,7 +62,7 @@ const Header = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Main Header */}
       <header

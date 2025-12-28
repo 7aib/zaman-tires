@@ -39,12 +39,6 @@ const WhyChooseUs = () => {
         "Professional technicians with extensive experience in tire installation and automotive services.",
     },
     {
-      icon: Star,
-      title: "4.0 Rating",
-      description:
-        "Highly rated by our customers with 62+ positive reviews on Google.",
-    },
-    {
       icon: CheckCircle,
       title: "Quality Assurance",
       description:
@@ -55,7 +49,6 @@ const WhyChooseUs = () => {
   const stats = [
     { number: "90+", label: "Tire Brands" },
     { number: "1000+", label: "Happy Customers" },
-    { number: "4.0", label: "Star Rating" },
     { number: "20+", label: "Years Experience" },
   ];
 

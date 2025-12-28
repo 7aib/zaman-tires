@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Phone, MapPin, Clock, Mail, Star } from "lucide-react";
+import { googleReviews } from "@/utils/googleReviews";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -54,7 +55,7 @@ const Footer = () => {
               alignment, and automotive services. Over 90+ tire brands
               available.
             </p>
-            <div className="flex items-center space-x-1">
+            {/* <div className="flex items-center space-x-1">
               <div className="flex">
                 {[...Array(5)].map((_, i) => (
                   <Star
@@ -63,8 +64,8 @@ const Footer = () => {
                   />
                 ))}
               </div>
-              <span className="text-sm text-gray-400">4.0 (62 reviews)</span>
-            </div>
+              <span className="text-sm text-gray-400">{googleReviews.rating} ({googleReviews.reviewCount} reviews)</span>
+            </div> */}
           </div>
 
           {/* Quick Links */}

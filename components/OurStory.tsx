@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import { Award, Users, MapPin, Clock, Star, CheckCircle } from "lucide-react";
+import { googleReviews } from "@/utils/googleReviews";
 
 const OurStory = () => {
   const milestones = [
@@ -37,9 +38,9 @@ const OurStory = () => {
     },
     {
       year: "2024",
-      title: "4.0 Rating",
+      title: `${googleReviews.rating} Rating`,
       description:
-        "Maintained excellent customer satisfaction with 4.0-star rating and 62+ positive reviews.",
+        `Maintained excellent customer satisfaction with ${googleReviews.rating}-star rating and ${googleReviews.reviewCount}+ positive reviews.`,
     },
   ];
 

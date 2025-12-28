@@ -13,6 +13,7 @@ import {
 import Link from 'next/link'
 
 const ServicesSection = () => {
+  // our products sections 
   const services = [
     {
       icon: Wrench,

@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react"
 import { Star, Users, MessageCircle, Award } from 'lucide-react'
+import { googleReviews } from '@/utils/googleReviews'
 
 const ReviewsHero = () => {
   const stats = [
@@ -44,7 +45,7 @@ const ReviewsHero = () => {
                 <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
               ))}
             </div>
-            <span className="text-lg font-semibold">4.0 Rating</span>
+            <span className="text-lg font-semibold">{googleReviews.rating} Rating</span>
           </motion.div>
 
           {/* Main Headline */}

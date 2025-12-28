@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react"
 import { Phone, MapPin, Clock, Mail, MessageCircle, Star } from 'lucide-react'
+import { googleReviews } from '@/utils/googleReviews'
 
 const ContactInfo = () => {
   const contactDetails = [
@@ -126,8 +127,8 @@ const ContactInfo = () => {
                 ))}
               </div>
               <div className="text-left">
-                <div className="text-2xl font-bold">4.0 Rating</div>
-                <div className="text-primary-200 text-sm">62+ Happy Customers</div>
+                <div className="text-2xl font-bold">{googleReviews.rating} Rating</div>
+                <div className="text-primary-200 text-sm">{googleReviews.reviewCount}+ Happy Customers</div>
               </div>
             </div>
 

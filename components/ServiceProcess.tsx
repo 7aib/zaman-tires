@@ -11,6 +11,7 @@ import {
   Clock,
   MapPin
 } from 'lucide-react'
+import { googleReviews } from '@/utils/googleReviews'
 
 const ServiceProcess = () => {
   const steps = [
@@ -65,8 +66,8 @@ const ServiceProcess = () => {
     },
     {
       icon: Star,
-      title: '4.0 Rating',
-      description: 'Highly rated by 62+ satisfied customers'
+      title: `${googleReviews.rating} Rating`,
+      description: `Highly rated by ${googleReviews.reviewCount}+ satisfied customers`
     },
     {
       icon: CheckCircle,
