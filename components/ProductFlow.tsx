@@ -13,6 +13,7 @@ const ProductFlow = () => {
   const categories = {
     rims: {
       name: "Rims",
+      image: "static/rim.png",
       subcategories: [
         "12 inches",
         "13 inches",
@@ -28,13 +29,21 @@ const ProductFlow = () => {
     },
     tires: {
       name: "Tires",
+      image: "static/tire.png",
       subcategories: [
-        "Michelin",
+        "TracMax",
+        "Rapid",
         "Yokohama",
-        "Bridgestone",
+        "Michelin",
         "Continental",
-        "Good Year",
-        "Tracmax",
+        "PowerTrac",
+        "TransMate",
+        "AutoGrip",
+        "Altenzo",
+        "Winda",
+        "WindForce",
+        "Dunlop",
+        "BridgeStone",
       ],
     },
   };
@@ -46,7 +55,7 @@ const ProductFlow = () => {
           id: 1,
           name: "12 inch Steel Rim",
           price: "PKR 2,500",
-          image: "/images/rims/12-rim-1.jpg",
+          image: "static/15 inches/1.jpg",
         },
         {
           id: 2,
@@ -57,26 +66,146 @@ const ProductFlow = () => {
       ],
       "13 inches": [
         {
-          id: 3,
-          name: "13 inch Steel Rim",
-          price: "PKR 2,800",
-          image: "/images/rims/13-rim-1.jpg",
+          id: 31,
+          name: "13 inch Alloy Rim - Design 1",
+          price: "PKR 62,500",
+          image: "static/13 inches/1.jpeg",
+        },
+              {
+          id: 32,
+          name: "13 inch Alloy Rim - Design 2",
+          price: "PKR 62,500",
+          image: "static/13 inches/2.jpeg",
+        },
+              {
+          id: 33,
+          name: "13 inch Alloy Rim - Design 3",
+          price: "PKR 62,500",
+          image: "static/13 inches/3.jpeg",
+        },
+              {
+          id: 34,
+          name: "13 inch Alloy Rim - Design 4",
+          price: "PKR 62,500",
+          image: "static/13 inches/4.jpeg",
+        },
+              {
+          id: 35,
+          name: "13 inch Alloy Rim - Design 5",
+          price: "PKR 62,500",
+          image: "static/13 inches/5.jpeg",
+        },
+              {
+          id: 36,
+          name: "13 inch Alloy Rim - Design 6",
+          price: "PKR 62,500",
+          image: "static/13 inches/6.jpeg",
+        },
+              {
+          id: 37,
+          name: "13 inch Alloy Rim - Design 7",
+          price: "PKR 62,500",
+          image: "static/13 inches/7.jpeg",
+        },
+              {
+          id: 38,
+          name: "13 inch Alloy Rim - Design 8",
+          price: "PKR 62,500",
+          image: "static/13 inches/8.jpeg",
+        },
+              {
+          id: 39,
+          name: "13 inch Alloy Rim - Design 9",
+          price: "PKR 62,500",
+          image: "static/13 inches/9.jpeg",
+        },
+              {
+          id: 310,
+          name: "13 inch Alloy Rim - Design 10",
+          price: "PKR 62,500",
+          image: "static/13 inches/10.jpeg",
+        },
+              {
+          id: 311,
+          name: "14 inch Alloy Rim - Design 11",
+          price: "PKR 62,500",
+          image: "static/13 inches/11.jpeg",
         },
       ],
       "14 inches": [
         {
-          id: 4,
-          name: "14 inch Alloy Rim",
-          price: "PKR 4,500",
-          image: "/images/rims/14-rim-1.jpg",
+          id: 41,
+          name: "14 inch Alloy Rim - Design 1",
+          price: "PKR 62,500",
+          image: "static/14 inches/1.jpeg",
+        },
+        {
+          id: 42,
+          name: "14 inch Alloy Rim - Design 2",
+          price: "PKR 64,000",
+          image: "static/14 inches/2.jpeg",
+        },
+        {
+          id: 43,
+          name: "14 inch Alloy Rim - Design 3",
+          price: "PKR 66,500",
+          image: "static/14 inches/3.jpeg",
+        },
+        {
+          id: 44,
+          name: "14 inch Alloy Rim - Design 4",
+          price: "PKR 70,000",
+          image: "static/14 inches/4.jpeg",
+        },
+        {
+          id: 45,
+          name: "14 inch Premium Rim - Design 5",
+          price: "PKR 75,000",
+          image: "static/14 inches/5.jpeg",
         },
       ],
       "15 inches": [
         {
           id: 5,
-          name: "15 inch Steel Rim",
-          price: "PKR 3,200",
-          image: "/images/rims/15-rim-1.jpg",
+          name: "15 inch Steel Rim - Design 1",
+          price: "PKR 62,000",
+          image: "static/15 inches/1.jpeg",
+        },
+        {
+          id: 51,
+          name: "15 inch Steel Rim - Design 2",
+          price: "PKR 65,000",
+          image: "static/15 inches/2.jpeg",
+        },
+        {
+          id: 52,
+          name: "15 inch Alloy Rim - Design 3",
+          price: "PKR 68,500",
+          image: "static/15 inches/3.jpeg",
+        },
+        {
+          id: 53,
+          name: "15 inch Alloy Rim - Design 4",
+          price: "PKR 72,000",
+          image: "static/15 inches/4.jpeg",
+        },
+        {
+          id: 54,
+          name: "15 inch Alloy Rim - Design 5",
+          price: "PKR 75,500",
+          image: "static/15 inches/5.jpeg",
+        },
+        {
+          id: 55,
+          name: "15 inch Premium Rim - Design 6",
+          price: "PKR 80,000",
+          image: "static/15 inches/6.jpeg",
+        },
+        {
+          id: 56,
+          name: "15 inch Premium Rim - Design 7",
+          price: "PKR 85,000",
+          image: "static/15 inches/7.jpeg",
         },
       ],
       "16 inches": [
@@ -129,18 +258,20 @@ const ProductFlow = () => {
       ],
     },
     tires: {
-      Michelin: [
+      TracMax: [
         {
           id: 12,
-          name: "Michelin Pilot Sport",
-          price: "PKR 12,500",
-          image: "/images/tires/michelin-1.jpg",
+          name: "TracMax Performance Tire",
+          price: "PKR 7,500",
+          image: "/images/tires/tracmax-1.jpg",
         },
+      ],
+      Rapid: [
         {
           id: 13,
-          name: "Michelin Defender",
-          price: "PKR 8,500",
-          image: "/images/tires/michelin-2.jpg",
+          name: "Rapid All Season",
+          price: "PKR 6,500",
+          image: "/images/tires/rapid-1.jpg",
         },
       ],
       Yokohama: [
@@ -151,36 +282,90 @@ const ProductFlow = () => {
           image: "/images/tires/yokohama-1.jpg",
         },
       ],
-      Bridgestone: [
+      Michelin: [
         {
           id: 15,
-          name: "Bridgestone Turanza",
-          price: "PKR 10,500",
-          image: "/images/tires/bridgestone-1.jpg",
+          name: "Michelin Pilot Sport",
+          price: "PKR 12,500",
+          image: "/images/tires/michelin-1.jpg",
+        },
+        {
+          id: 16,
+          name: "Michelin Defender",
+          price: "PKR 8,500",
+          image: "/images/tires/michelin-2.jpg",
         },
       ],
       Continental: [
         {
-          id: 16,
+          id: 17,
           name: "Continental PureContact",
           price: "PKR 11,500",
           image: "/images/tires/continental-1.jpg",
         },
       ],
-      "Good Year": [
-        {
-          id: 17,
-          name: "Good Year Excellence",
-          price: "PKR 9,800",
-          image: "/images/tires/goodyear-1.jpg",
-        },
-      ],
-      Tracmax: [
+      PowerTrac: [
         {
           id: 18,
-          name: "Tracmax Tarmac",
-          price: "PKR 7,500",
-          image: "/images/tires/tracmax-1.jpg",
+          name: "PowerTrac Premium",
+          price: "PKR 8,000",
+          image: "/images/tires/powertrac-1.jpg",
+        },
+      ],
+      TransMate: [
+        {
+          id: 19,
+          name: "TransMate Commercial",
+          price: "PKR 7,800",
+          image: "/images/tires/transmate-1.jpg",
+        },
+      ],
+      AutoGrip: [
+        {
+          id: 20,
+          name: "AutoGrip All Terrain",
+          price: "PKR 7,200",
+          image: "/images/tires/autogrip-1.jpg",
+        },
+      ],
+      Altenzo: [
+        {
+          id: 21,
+          name: "Altenzo Performance",
+          price: "PKR 8,500",
+          image: "/images/tires/altenzo-1.jpg",
+        },
+      ],
+      Winda: [
+        {
+          id: 22,
+          name: "Winda Economy",
+          price: "PKR 5,500",
+          image: "/images/tires/winda-1.jpg",
+        },
+      ],
+      WindForce: [
+        {
+          id: 23,
+          name: "WindForce Catchfors",
+          price: "PKR 6,800",
+          image: "/images/tires/windforce-1.jpg",
+        },
+      ],
+      Dunlop: [
+        {
+          id: 24,
+          name: "Dunlop SP Sport",
+          price: "PKR 10,000",
+          image: "/images/tires/dunlop-1.jpg",
+        },
+      ],
+      BridgeStone: [
+        {
+          id: 25,
+          name: "BridgeStone Turanza",
+          price: "PKR 10,500",
+          image: "/images/tires/bridgestone-1.jpg",
         },
       ],
     },
@@ -212,6 +397,21 @@ const ProductFlow = () => {
   return (
     <section className="py-16 bg-gray-50">
       <div className="container-max">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Our <span className="text-primary-600">Products</span>
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            High-quality tires and stylish rims designed to enhance performance,
+            safety, and appearance. Built for durability, comfort, and confident driving.
+          </p>
+        </motion.div>
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -247,13 +447,22 @@ const ProductFlow = () => {
                   className="p-8 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow border-2 border-transparent hover:border-primary-600 text-left group"
                 >
                   <div className="flex items-center justify-between">
-                    <div>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                        {category.name}
-                      </h3>
-                      <p className="text-gray-600">
-                        {category.subcategories.length} options available
-                      </p>
+                    <div className="flex items-center">
+                      <div className="w-24 h-24 mr-6 rounded-md overflow-hidden bg-gray-100 flex-shrink-0">
+                        <img
+                          src={(category as any).image}
+                          alt={`${(category as any).name} thumbnail`}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div>
+                        <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                          {category.name}
+                        </h3>
+                        <p className="text-gray-600">
+                          {category.subcategories.length} options available
+                        </p>
+                      </div>
                     </div>
                     <ChevronRight className="h-8 w-8 text-gray-400 group-hover:text-primary-600 transition-colors" />
                   </div>
@@ -278,7 +487,7 @@ const ProductFlow = () => {
               </button>
 
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Select {categories[selectedCategory as keyof typeof categories].name} Size
+                {selectedCategory === "rims" ? "Select Rim Size" : "Select Tire Brand"}
               </h3>
 
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">

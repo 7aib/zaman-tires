@@ -26,7 +26,7 @@ export default function Home() {
       <HeroSection />
       <ProductFlow />
       <ServicesSection />
-      <BrandsSection />
+      {/* <BrandsSection /> */}
       <WhyChooseUs />
       <TestimonialsSection />
       {/* <CTASection /> */}

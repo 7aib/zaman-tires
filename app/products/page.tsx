@@ -3,6 +3,7 @@ import ProductsHero from "@/components/ProductsHero";
 import ProductCategories from "@/components/ProductCategories";
 import NewVsOldTires from "@/components/NewVsOldTires";
 import CTASection from "@/components/CTASection";
+import ProductFlow from "@/components/ProductFlow";
 
 export const metadata: Metadata = {
   title:
@@ -19,10 +20,11 @@ export const metadata: Metadata = {
 export default function Products() {
   return (
     <>
-      <ProductsHero />
+    <ProductFlow />
+      {/* <ProductsHero />
       <ProductCategories />
       <NewVsOldTires />
-      <CTASection />
+      <CTASection /> */}
     </>
   );
 }
