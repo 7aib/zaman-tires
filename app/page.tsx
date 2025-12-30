@@ -1,4 +1,5 @@
 import HeroSection from "@/components/HeroSection";
+import ProductFlow from "@/components/ProductFlow";
 import ServicesSection from "@/components/ServicesSection";
 import BrandsSection from "@/components/BrandsSection";
 import WhyChooseUs from "@/components/WhyChooseUs";
@@ -23,6 +24,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
+      <ProductFlow />
       <ServicesSection />
       <BrandsSection />
       <WhyChooseUs />
