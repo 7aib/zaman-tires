@@ -53,7 +53,7 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="section-padding bg-gray-900 text-white">
+    <section className="section-padding bg-neutral-50 text-gray-900">
       <div className="container-max">
         {/* Section Header */}
         <motion.div
@@ -67,7 +67,7 @@ const WhyChooseUs = () => {
             Why Choose{" "}
             <span className="text-primary-400">Zaman tyre Trader</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             We are Wah Cantt's most trusted tire shop, offering premium services
             with unmatched quality and customer satisfaction.
           </p>
@@ -86,7 +86,7 @@ const WhyChooseUs = () => {
               <div className="text-4xl md:text-5xl font-bold text-primary-400 mb-2">
                 {stat.number}
               </div>
-              <div className="text-gray-300 font-medium">{stat.label}</div>
+              <div className="text-gray-700 font-medium">{stat.label}</div>
             </div>
           ))}
         </motion.div>
@@ -102,15 +102,15 @@ const WhyChooseUs = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-colors duration-300"
+                className="bg-white border border-neutral-200 rounded-xl p-6 hover:shadow-md transition-all duration-200"
               >
                 <div className="w-12 h-12 bg-primary-600 rounded-lg flex items-center justify-center mb-4">
                   <IconComponent className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   {feature.title}
                 </h3>
-                <p className="text-gray-300 leading-relaxed">
+                  <p className="text-gray-600 leading-relaxed">
                   {feature.description}
                 </p>
               </motion.div>

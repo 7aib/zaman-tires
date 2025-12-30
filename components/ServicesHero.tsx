@@ -23,11 +23,11 @@ const ServicesHero = () => {
             backgroundImage: 'url(https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80)',
           }}
         />
-        <div className="absolute inset-0 bg-black bg-opacity-60" />
+        <div className="absolute inset-0 bg-white bg-opacity-60" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container-max text-center text-white px-4">
+      <div className="relative z-10 container-max text-center text-gray-900 px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -49,7 +49,7 @@ const ServicesHero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-xl md:text-2xl text-gray-200 mb-12 max-w-3xl mx-auto leading-relaxed"
+            className="text-xl md:text-2xl text-gray-700 mb-12 max-w-3xl mx-auto leading-relaxed"
           >
             Expert automotive services to keep your vehicle running smoothly and safely. 
             From tire changes to wheel alignment, we provide comprehensive solutions.
@@ -70,10 +70,10 @@ const ServicesHero = () => {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
-                  className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-4 hover:bg-opacity-20 transition-all duration-300 hover:scale-105"
+                  className="bg-white bg-opacity-80 backdrop-blur-sm rounded-xl p-4 hover:shadow-sm transition-all duration-300 hover:scale-105"
                 >
                   <IconComponent className="h-8 w-8 text-primary-400 mx-auto mb-2" />
-                  <p className="text-sm font-medium text-white">{service.name}</p>
+                  <p className="text-sm font-medium text-gray-900">{service.name}</p>
                 </motion.div>
               )
             })}

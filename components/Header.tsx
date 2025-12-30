@@ -67,7 +67,7 @@ const Header = () => {
       {/* Main Header */}
       <header
         className={`sticky top-0 z-50 transition-all duration-300 ${
-          isScrolled ? "bg-gray-900 shadow-lg" : "bg-gray-900 shadow-sm"
+          isScrolled ? "bg-gray-900/50 backdrop-blur-md shadow-lg" : "bg-gray-900 shadow-sm"
         }`}
       >
         <div className="container-max">
@@ -103,7 +103,7 @@ const Header = () => {
             </nav>
 
             {/* CTA Buttons */}
-            <div className="hidden lg:flex items-center space-x-4">
+            {/* <div className="hidden lg:flex items-center space-x-4">
               <a href="tel:+923005888776" className="btn-primary">
                 Call Now
               </a>
@@ -115,7 +115,7 @@ const Header = () => {
               >
                 Get Directions
               </a>
-            </div>
+            </div> */}
 
             {/* Mobile menu button */}
             <button

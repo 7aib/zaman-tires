@@ -15,7 +15,7 @@ const TestimonialsSection = () => {
     document.body.appendChild(script);
   }, []);
   return (
-    <section className="section-padding bg-black">
+    <section className="section-padding bg-neutral-50">
       <div className="container-max">
         {/* Section Header */}
         {/* Google Reviews Widget Section */}
@@ -26,7 +26,7 @@ const TestimonialsSection = () => {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h3 className="text-3xl md:text-4xl font-bold text-gray-300 mb-8 text-center">
+          <h3 className="text-3xl md:text-4xl font-bold text-gray-700 mb-8 text-center">
             Live Google <span className="text-primary-600">Reviews</span>
           </h3>
           

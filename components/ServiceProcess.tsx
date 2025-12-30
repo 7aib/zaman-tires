@@ -77,7 +77,7 @@ const ServiceProcess = () => {
   ]
 
   return (
-    <section className="section-padding bg-black">
+    <section className="section-padding bg-neutral-50">
       <div className="container-max">
         {/* Section Header */}
         <motion.div
@@ -87,10 +87,10 @@ const ServiceProcess = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-300 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Our Service <span className="text-primary-600">Process</span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Simple, transparent, and customer-focused service process designed to provide 
             you with the best possible experience and results.
           </p>
@@ -114,20 +114,20 @@ const ServiceProcess = () => {
                   className={`flex items-center ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}
                 >
                   <div className={`w-full lg:w-1/2 ${index % 2 === 0 ? 'lg:pr-12' : 'lg:pl-12'}`}>
-                    <div className="bg-gray-900 rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300">
+                    <div className="bg-white border border-neutral-200 rounded-2xl p-8 hover:shadow-md transition-shadow duration-200">
                       <div className="flex items-center space-x-4 mb-6">
                         <div className="w-16 h-16 bg-primary-600 rounded-xl flex items-center justify-center">
                           <IconComponent className="h-8 w-8 text-white" />
                         </div>
                         <div>
-                          <h3 className="text-2xl font-bold text-gray-300">{step.title}</h3>
+                          <h3 className="text-2xl font-bold text-gray-900">{step.title}</h3>
                           <div className="text-sm text-primary-600 font-semibold">Step {index + 1}</div>
                         </div>
                       </div>
-                      <p className="text-gray-400 leading-relaxed mb-6">{step.description}</p>
+                      <p className="text-gray-600 leading-relaxed mb-6">{step.description}</p>
                       <ul className="space-y-2">
                         {step.details.map((detail, detailIndex) => (
-                          <li key={detailIndex} className="flex items-center space-x-2 text-sm text-gray-500">
+                          <li key={detailIndex} className="flex items-center space-x-2 text-sm text-gray-600">
                             <div className="w-1.5 h-1.5 bg-primary-600 rounded-full" />
                             <span>{detail}</span>
                           </li>

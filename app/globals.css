@@ -6,25 +6,29 @@
 
 @layer base {
   html {
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   }
   
   body {
-    @apply bg-black text-gray-400 antialiased;
+    @apply bg-white text-gray-900 antialiased;
+    background-color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color-scheme: light;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2;
+    @apply bg-primary-500 hover:bg-primary-600 text-white font-semibold py-3 px-5 rounded-lg transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-primary-300 focus:ring-offset-2 shadow-sm;
   }
   
   .btn-secondary {
-    @apply bg-gray-800 hover:bg-gray-700 text-gray-300 font-semibold py-3 px-6 rounded-lg border border-gray-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2;
+    @apply bg-neutral-100 hover:bg-neutral-200 text-gray-800 font-semibold py-3 px-5 rounded-lg border border-neutral-200 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-primary-100 focus:ring-offset-2;
   }
   
   .btn-accent {
-    @apply bg-gray-800 hover:bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2;
+    @apply bg-accent-100 hover:bg-accent-200 text-primary-700 font-semibold py-3 px-5 rounded-lg transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-accent-200 focus:ring-offset-2;
   }
   
   .section-padding {
@@ -36,15 +40,15 @@
   }
   
   .gradient-bg {
-    background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
   }
   
   .hero-gradient {
-    background: linear-gradient(135deg, #111111 0%, #333333 50%, #555555 100%);
+    background: linear-gradient(180deg, #ffffff 0%, #f3f6fb 60%, #eef6ff 100%);
   }
   
   .card-hover {
-    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+    @apply transition-all duration-200 bg-white border border-neutral-200 rounded-lg shadow-sm hover:shadow-md hover:-translate-y-1;
   }
 }
 
@@ -101,7 +105,7 @@
 .tire-icon {
   width: 60px;
   height: 60px;
-  background: conic-gradient(from 0deg, #dc2626 0deg 90deg, #1f2937 90deg 180deg, #dc2626 180deg 270deg, #1f2937 270deg);
+  background: conic-gradient(from 0deg, #5aa8ff 0deg 90deg, #e9eef6 90deg 180deg, #5aa8ff 180deg 270deg, #e9eef6 270deg);
   border-radius: 50%;
   position: relative;
 }
