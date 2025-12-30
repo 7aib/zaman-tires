@@ -138,7 +138,7 @@ const HeroSection = () => {
               className="text-white"
             >
               {/* Rating Badge */}
-              <motion.div
+              {/* <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
@@ -153,7 +153,7 @@ const HeroSection = () => {
                   ))}
                 </div>
                 <span className="text-sm font-medium">{googleReviews.rating} Rating • {googleReviews.reviewCount} Reviews</span>
-              </motion.div>
+              </motion.div> */}
 
               {/* Logo */}
               {slide.logo && (
