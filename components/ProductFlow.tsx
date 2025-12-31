@@ -13,7 +13,7 @@ const ProductFlow = () => {
   const categories = {
     rims: {
       name: "Rims",
-      image: "static/rim.png",
+      image: "static/rim.jpg",
       subcategories: [
         "12 inches",
         "13 inches",
@@ -29,7 +29,7 @@ const ProductFlow = () => {
     },
     tires: {
       name: "Tires",
-      image: "static/tire.png",
+      image: "static/tire.jpg",
       subcategories: [
         "TracMax",
         "Rapid",
