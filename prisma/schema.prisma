@@ -1,0 +1,51 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Diameter {
+  id       Int       @id @default(autoincrement())
+  value    Int       @unique // e.g., 12, 13, 14, 15
+  products Product[]
+}
+
+model Brand {
+  id       String    @id @default(uuid())
+  name     String    @unique
+  type     String    // 'rim' | 'tyre' | 'both'
+  products Product[]
+}
+
+model Product {
+  id          String   @id @default(uuid())
+  name        String
+  type        String // 'tyre' | 'rim'
+  
+  description String
+  price       Float
+  quantity    Int      @default(0)
+  imageUrl    String?
+  
+  // Relations
+  diameterId  Int?
+  diameter    Diameter? @relation(fields: [diameterId], references: [id])
+
+  brandId     String?
+  brand       Brand?    @relation(fields: [brandId], references: [id])
+
+  // Specific Fields
+  rimWidth    String?   // e.g. "8jj" (Only for Rims)
+  tireProfile String?   // e.g. "205/65" (Only for Tires)
+
+  isActive    Boolean  @default(true)
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
