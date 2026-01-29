@@ -22,7 +22,7 @@ const slides: SlideContent[] = [
     title: "Yokohama",
     subtitle: "Premium Tire Excellence",
     description: "Experience superior grip and durability with Yokohama's advanced tire technology. Designed for all weather conditions with enhanced safety and longevity.",
-    image: "url('static/3DTuning Snapshot.jpg')",
+    image: "url('static/yokohama.jpg')",
     cta: "Explore Yokohama"
   },
   {
@@ -31,7 +31,7 @@ const slides: SlideContent[] = [
     title: "Goodyear",
     subtitle: "Trusted Performance",
     description: "Drive with confidence using Goodyear's innovative tire solutions. Over 120 years of excellence in tire manufacturing with proven reliability and comfort.",
-    image: "url('static/3DTuning Snapshot1.jpg')",
+    image: "url('static/goodyear.jpg')",
     cta: "Explore Goodyear"
   },
   {
@@ -40,7 +40,7 @@ const slides: SlideContent[] = [
     title: "Continental",
     subtitle: "German Engineering",
     description: "Feel the difference with Continental's cutting-edge tire technology. Precision-engineered for optimal handling, fuel efficiency, and safety on every road.",
-    image: "url('static/3DTuning Snapshot2.jpg')",
+    image: "url('static/continental.jpg')",
     cta: "Explore Continental"
   },
   {
@@ -49,7 +49,7 @@ const slides: SlideContent[] = [
     title: "Bridgestone",
     subtitle: "Innovation in Motion",
     description: "Bridgestone brings you revolutionary tire technology with superior performance and reliability. Perfect balance of comfort, safety, and long-lasting durability.",
-    image: "url('static/3DTuning Snapshot2.jpg')",
+    image: "url('static/bridgestone.jpg')",
     cta: "Explore Bridgestone"
   },
   {
@@ -58,7 +58,7 @@ const slides: SlideContent[] = [
     title: "Dunlop",
     subtitle: "Precision & Performance",
     description: "Dunlop tires deliver exceptional grip and braking power. Engineered for responsive handling and extended tire life in all driving conditions.",
-    image: "url('static/3DTuning Snapshot2.jpg')",
+    image: "url('static/dunlop.jpg')",
     cta: "Explore Dunlop"
   },
   {
@@ -67,7 +67,7 @@ const slides: SlideContent[] = [
     title: "Pirelli",
     subtitle: "Italian Excellence",
     description: "Experience luxury and performance with Pirelli's premium tire collection. Engineered for sophisticated driving with superior handling and aesthetic appeal.",
-    image: "url('static/3DTuning Snapshot2.jpg')",
+    image: "url('static/pirelli.jpg')",
     cta: "Explore Pirelli"
   }
 ];
@@ -279,11 +279,10 @@ const HeroSection = () => {
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`h-3 rounded-full transition-all duration-300 ${
-              index === currentSlide
-                ? "bg-primary-400 w-8"
-                : "bg-white bg-opacity-40 w-3 hover:bg-opacity-60"
-            }`}
+            className={`h-3 rounded-full transition-all duration-300 ${index === currentSlide
+              ? "bg-primary-400 w-8"
+              : "bg-white bg-opacity-40 w-3 hover:bg-opacity-60"
+              }`}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
