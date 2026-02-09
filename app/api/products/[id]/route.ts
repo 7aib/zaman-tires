@@ -71,7 +71,19 @@ export async function PUT(
     }
 
     const { id } = params;
-    const { name, type, brand, size, price, description, quantity, imageUrl } = await request.json();
+    const {
+      name,
+      type,
+      price,
+      description,
+      quantity,
+      imageUrl,
+      isActive,
+      brand, // Brand ID
+      diameter, // Diameter value (e.g. 17)
+      rimWidth,
+      tireProfile
+    } = await request.json();
 
     // Check if product exists first
     const existingProduct = await prisma.product.findUnique({
@@ -85,18 +97,48 @@ export async function PUT(
       );
     }
 
+    // 1. Resolve Brand (if provided)
+    let brandConnect = undefined;
+    if (brand) {
+      const brandRecord = await prisma.brand.findUnique({
+        where: { id: brand }
+      });
+      if (brandRecord) {
+        brandConnect = { connect: { id: brandRecord.id } };
+      }
+    }
+
+    // 2. Resolve Diameter (if provided)
+    let diameterConnect = undefined;
+    if (diameter) {
+      const diameterValue = parseInt(diameter);
+      const diameterRecord = await prisma.diameter.findUnique({
+        where: { value: diameterValue }
+      });
+      if (diameterRecord) {
+        diameterConnect = { connect: { id: diameterRecord.id } };
+      }
+    }
+
     const updatedProduct = await prisma.product.update({
       where: { id },
       data: {
         name,
         type,
-        brand,
-        size,
-        price: parseFloat(price),
+        price: price !== undefined ? parseFloat(price) : undefined,
         description,
-        quantity: quantity !== undefined ? quantity : existingProduct.quantity,
-        imageUrl: imageUrl !== undefined ? imageUrl : existingProduct.imageUrl,
+        quantity: quantity !== undefined ? parseInt(quantity) : undefined,
+        imageUrl,
+        isActive: isActive !== undefined ? isActive : undefined,
+        rimWidth: type === 'rim' ? rimWidth : (type === 'tyre' ? null : undefined),
+        tireProfile: type === 'tyre' ? tireProfile : (type === 'rim' ? null : undefined),
+        brand: brandConnect,
+        diameter: diameterConnect,
       },
+      include: {
+        brand: true,
+        diameter: true,
+      }
     });
 
     return NextResponse.json(updatedProduct, { status: 200 });

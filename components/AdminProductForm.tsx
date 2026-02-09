@@ -8,9 +8,12 @@ interface AdminProductFormProps {
     name: string;
     type: 'tyre' | 'rim';
     brand: string;
-    size: string;
+    diameter: string;
     price: number;
     description: string;
+    quantity?: number;
+    rimWidth?: string;
+    tireProfile?: string;
     imageUrl?: string;
     isActive?: boolean;
   }) => Promise<void>;
@@ -21,9 +24,12 @@ export default function AdminProductForm({ onAddProduct }: AdminProductFormProps
     name: '',
     type: 'tyre' as 'tyre' | 'rim',
     brand: '',
-    size: '',
+    diameter: '',
     price: '',
     description: '',
+    quantity: '0',
+    rimWidth: '',
+    tireProfile: '',
     imageUrl: '',
     isActive: true,
   });
@@ -80,15 +86,19 @@ export default function AdminProductForm({ onAddProduct }: AdminProductFormProps
       await onAddProduct({
         ...formData,
         price: parseFloat(formData.price),
+        quantity: parseInt(formData.quantity) || 0,
       });
 
       setFormData({
         name: '',
         type: 'tyre',
         brand: '',
-        size: '',
+        diameter: '',
         price: '',
         description: '',
+        quantity: '0',
+        rimWidth: '',
+        tireProfile: '',
         imageUrl: '',
         isActive: true,
       });
@@ -168,20 +178,71 @@ export default function AdminProductForm({ onAddProduct }: AdminProductFormProps
           />
         </div>
 
-        {/* Size */}
+        {/* Diameter */}
         <div>
-          <label htmlFor="size" className="block text-sm font-medium text-gray-700 mb-2">
-            Size *
+          <label htmlFor="diameter" className="block text-sm font-medium text-gray-700 mb-2">
+            Diameter (inches) *
           </label>
           <input
-            id="size"
+            id="diameter"
             type="text"
-            name="size"
-            value={formData.size}
+            name="diameter"
+            value={formData.diameter}
             onChange={handleChange}
-            placeholder="e.g., 205/55R16 or 17 inches"
+            placeholder="e.g., 17"
             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
             required
+          />
+        </div>
+
+        {/* Type Specific Fields */}
+        {formData.type === 'rim' && (
+          <div>
+            <label htmlFor="rimWidth" className="block text-sm font-medium text-gray-700 mb-2">
+              Rim Width (JJ)
+            </label>
+            <input
+              id="rimWidth"
+              type="text"
+              name="rimWidth"
+              value={formData.rimWidth}
+              onChange={handleChange}
+              placeholder="e.g., 8jj"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+            />
+          </div>
+        )}
+
+        {formData.type === 'tyre' && (
+          <div>
+            <label htmlFor="tireProfile" className="block text-sm font-medium text-gray-700 mb-2">
+              Tire Profile
+            </label>
+            <input
+              id="tireProfile"
+              type="text"
+              name="tireProfile"
+              value={formData.tireProfile}
+              onChange={handleChange}
+              placeholder="e.g., 205/65"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+            />
+          </div>
+        )}
+
+        {/* Quantity */}
+        <div>
+          <label htmlFor="quantity" className="block text-sm font-medium text-gray-700 mb-2">
+            Quantity
+          </label>
+          <input
+            id="quantity"
+            type="number"
+            name="quantity"
+            value={formData.quantity}
+            onChange={handleChange}
+            placeholder="e.g., 4"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
           />
         </div>
 
