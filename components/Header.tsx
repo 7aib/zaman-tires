@@ -64,9 +64,8 @@ const Header = () => {
 
       {/* Main Header */}
       <header
-        className={`sticky top-0 z-50 transition-all duration-300 ${
-          isScrolled ? "bg-gray-900/50 backdrop-blur-md shadow-lg" : "bg-gray-900 shadow-sm"
-        }`}
+        className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? "bg-gray-900/50 backdrop-blur-md shadow-lg" : "bg-gray-900 shadow-sm"
+          }`}
       >
         <div className="container-max">
           <div className="flex items-center justify-between py-4">
@@ -74,7 +73,7 @@ const Header = () => {
             <Link href="/" className="flex items-center space-x-3">
               <div className="w-12 h-12 rounded-full flex items-center justify-center">
                 <div className="w-12 h-12 rounded-full overflow-hidden">
-                  <img src="static/logo.jpg" alt="" />
+                  <img src="/static/logo.jpg" alt="" />
                 </div>
 
                 {/* <span className="text-white font-bold text-xl">Z</span> */}

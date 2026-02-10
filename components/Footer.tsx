@@ -103,7 +103,7 @@ const Footer = () => {
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-primary-600 rounded-full flex items-center justify-center">
                 <div className="w-10 h-10 rounded-full overflow-hidden">
-                  <img src="static/logo.jpg" alt="" />
+                  <img src="/static/logo.jpg" alt="" />
                 </div>
                 {/* <span className="text-white font-bold text-lg">Z</span> */}
               </div>

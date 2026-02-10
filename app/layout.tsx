@@ -133,12 +133,12 @@ export default function RootLayout({
       <head>
         <link
           rel="icon"
-          href="https://www.zamantyretrader.com/static/logo.jpg"
+          href="/static/logo.jpg"
           type="image/jpeg"
         />
         <link
           rel="apple-touch-icon"
-          href="https://www.zamantyretrader.com/static/logo.jpg"
+          href="/static/logo.jpg"
         />
         <script
           type="application/ld+json"

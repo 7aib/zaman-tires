@@ -18,56 +18,56 @@ interface SlideContent {
 const slides: SlideContent[] = [
   {
     id: 1,
-    logo: "static/yokohama-seeklogo.png",
+    logo: "/static/yokohama-seeklogo.png",
     title: "Yokohama",
     subtitle: "Premium Tire Excellence",
     description: "Experience superior grip and durability with Yokohama's advanced tire technology. Designed for all weather conditions with enhanced safety and longevity.",
-    image: "url('static/yokohama.jpg')",
+    image: "url('/static/Yokohama.jpg')",
     cta: "Explore Yokohama"
   },
   {
     id: 2,
-    logo: "static/good-year-seeklogo.png",
+    logo: "/static/good-year-seeklogo.png",
     title: "Goodyear",
     subtitle: "Trusted Performance",
     description: "Drive with confidence using Goodyear's innovative tire solutions. Over 120 years of excellence in tire manufacturing with proven reliability and comfort.",
-    image: "url('static/goodyear.jpg')",
+    image: "url('/static/Goodyear.jpg')",
     cta: "Explore Goodyear"
   },
   {
     id: 3,
-    logo: "static/continental-seeklogo.png",
+    logo: "/static/continental-seeklogo.png",
     title: "Continental",
     subtitle: "German Engineering",
     description: "Feel the difference with Continental's cutting-edge tire technology. Precision-engineered for optimal handling, fuel efficiency, and safety on every road.",
-    image: "url('static/continental.jpg')",
+    image: "url('/static/continental.jpg')",
     cta: "Explore Continental"
   },
   {
     id: 4,
-    logo: "static/bridgestone-seeklogo.png",
+    logo: "/static/bridgestone-seeklogo.png",
     title: "Bridgestone",
     subtitle: "Innovation in Motion",
     description: "Bridgestone brings you revolutionary tire technology with superior performance and reliability. Perfect balance of comfort, safety, and long-lasting durability.",
-    image: "url('static/bridgestone.jpg')",
+    image: "url('/static/bridgestone.jpg')",
     cta: "Explore Bridgestone"
   },
   {
     id: 5,
-    logo: "static/dunlop-70th-seeklogo.png",
+    logo: "/static/dunlop-70th-seeklogo.png",
     title: "Dunlop",
     subtitle: "Precision & Performance",
     description: "Dunlop tires deliver exceptional grip and braking power. Engineered for responsive handling and extended tire life in all driving conditions.",
-    image: "url('static/dunlop.jpg')",
+    image: "url('/static/dunlop.jpg')",
     cta: "Explore Dunlop"
   },
   {
     id: 6,
-    logo: "static/pirelli-seeklogo.png",
+    logo: "/static/pirelli-seeklogo.png",
     title: "Pirelli",
     subtitle: "Italian Excellence",
     description: "Experience luxury and performance with Pirelli's premium tire collection. Engineered for sophisticated driving with superior handling and aesthetic appeal.",
-    image: "url('static/pirelli.jpg')",
+    image: "url('/static/pirelli.jpg')",
     cta: "Explore Pirelli"
   }
 ];
