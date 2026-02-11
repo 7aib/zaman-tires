@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { LogOut, Plus, Trash2 } from 'lucide-react';
 import AdminProductForm from '@/components/AdminProductForm';
@@ -34,6 +34,7 @@ export default function AdminDashboard() {
   const [activeTab, setActiveTab] = useState<'products' | 'brands' | 'diameters' | 'add'>('products');
   const [error, setError] = useState('');
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   // New item state
   const [newItemName, setNewItemName] = useState('');
@@ -127,7 +128,20 @@ export default function AdminDashboard() {
       const addedProduct = await response.json();
       setProducts([addedProduct, ...products]);
       setActiveTab('products');
-      setFormData({ ...formData, name: '', price: '', description: '', rimWidth: '', tireProfile: '' }); // Reset partial
+      setFormData({
+        name: '',
+        type: 'tyre',
+        brand: '',
+        diameter: '',
+        price: '',
+        description: '',
+        quantity: '0',
+        imageUrl: '',
+        rimWidth: '',
+        tireProfile: '',
+        isActive: true,
+      } as any);
+      if (fileInputRef.current) fileInputRef.current.value = '';
       setError('');
     } catch (err) {
       setError('Failed to add product');
@@ -320,6 +334,7 @@ export default function AdminDashboard() {
                         alert("Failed to upload image");
                       }
                     }}
+                    ref={fileInputRef}
                     className="w-full p-2 border rounded"
                   />
                   <p className="text-xs text-gray-500 mt-1">Uploads locally to /public/uploads</p>
