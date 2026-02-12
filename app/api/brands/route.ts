@@ -11,7 +11,8 @@ export async function GET() {
         });
         return NextResponse.json(brands);
     } catch (error) {
-        return NextResponse.json({ error: 'Failed to fetch brands' }, { status: 500 });
+        console.error('Error fetching brands:', error);
+        return NextResponse.json({ error: 'Failed to fetch brands', details: error instanceof Error ? error.message : String(error) }, { status: 500 });
     }
 }
 
@@ -46,7 +47,7 @@ export async function POST(request: NextRequest) {
         return NextResponse.json(newBrand, { status: 201 });
     } catch (error) {
         console.error('Error creating brand:', error);
-        return NextResponse.json({ error: 'Failed to create brand' }, { status: 500 });
+        return NextResponse.json({ error: 'Failed to create brand', details: error instanceof Error ? error.message : String(error) }, { status: 500 });
     }
 }
 

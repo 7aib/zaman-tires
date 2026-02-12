@@ -11,7 +11,8 @@ export async function GET() {
         });
         return NextResponse.json(diameters);
     } catch (error) {
-        return NextResponse.json({ error: 'Failed to fetch diameters' }, { status: 500 });
+        console.error('Error fetching diameters:', error);
+        return NextResponse.json({ error: 'Failed to fetch diameters', details: error instanceof Error ? error.message : String(error) }, { status: 500 });
     }
 }
 
@@ -45,6 +46,6 @@ export async function POST(request: NextRequest) {
         return NextResponse.json(newDiameter, { status: 201 });
     } catch (error) {
         console.error('Error creating diameter:', error);
-        return NextResponse.json({ error: 'Failed to create diameter' }, { status: 500 });
+        return NextResponse.json({ error: 'Failed to create diameter', details: error instanceof Error ? error.message : String(error) }, { status: 500 });
     }
 }
