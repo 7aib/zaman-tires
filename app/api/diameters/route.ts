@@ -10,9 +10,9 @@ export async function GET() {
             orderBy: { value: 'asc' }
         });
         return NextResponse.json(diameters);
-    } catch (error) {
+    } catch (error: any) {
         console.error('Error fetching diameters:', error);
-        return NextResponse.json({ error: 'Failed to fetch diameters', details: error instanceof Error ? error.message : String(error) }, { status: 500 });
+        return NextResponse.json({ error: 'Failed to fetch diameters', details: error?.message || 'Unknown error', code: error?.code }, { status: 500 });
     }
 }
 
@@ -44,8 +44,8 @@ export async function POST(request: NextRequest) {
         });
 
         return NextResponse.json(newDiameter, { status: 201 });
-    } catch (error) {
+    } catch (error: any) {
         console.error('Error creating diameter:', error);
-        return NextResponse.json({ error: 'Failed to create diameter', details: error instanceof Error ? error.message : String(error) }, { status: 500 });
+        return NextResponse.json({ error: 'Failed to create diameter', details: error?.message || 'Unknown error', code: error?.code }, { status: 500 });
     }
 }
