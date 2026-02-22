@@ -4,9 +4,9 @@ import crypto from 'crypto';
 export const dynamic = 'force-dynamic';
 export const runtime = 'nodejs';
 
-const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key-change-in-production';
-const ADMIN_USERNAME = process.env.ADMIN_USERNAME || 'admin';
-const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'admin123';
+const JWT_SECRET = process.env.JWT_SECRET;
+const ADMIN_USERNAME = process.env.ADMIN_USERNAME;
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
 
 function generateToken(username: string): string {
   try {
@@ -16,12 +16,12 @@ function generateToken(username: string): string {
       iat: Date.now(),
       exp: Date.now() + 24 * 60 * 60 * 1000, // 24 hours
     });
-    
+
     const hmac = crypto
       .createHmac('sha256', JWT_SECRET)
       .update(tokenData)
       .digest('hex');
-    
+
     const token = Buffer.from(`${tokenData}.${hmac}`).toString('base64');
     console.log('Token generated successfully');
     return token;
@@ -50,7 +50,7 @@ export async function POST(request: NextRequest) {
     // Validate credentials
     const isValid = username === ADMIN_USERNAME && password === ADMIN_PASSWORD;
     console.log('Validation result:', isValid);
-    
+
     if (!isValid) {
       console.log('Invalid credentials');
       return NextResponse.json(
@@ -83,7 +83,7 @@ export async function POST(request: NextRequest) {
     const errorMessage = error instanceof Error ? error.message : String(error);
     console.error('Error details:', errorMessage);
     console.error('Full error:', error);
-    
+
     return NextResponse.json(
       { error: 'Internal server error: ' + errorMessage },
       { status: 500 }
