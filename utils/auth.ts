@@ -28,7 +28,7 @@ export function generateToken(username: string): string {
     exp: Date.now() + 24 * 60 * 60 * 1000, // 24 hours
   });
   const hmac = crypto
-    .createHmac('sha256', JWT_SECRET)
+    .createHmac('sha256', JWT_SECRET!)
     .update(tokenData)
     .digest('hex');
   return Buffer.from(`${tokenData}.${hmac}`).toString('base64');
@@ -42,7 +42,7 @@ export function verifyToken(token: string): { username: string; role: string } |
 
     const tokenData = JSON.parse(data);
     const expectedHmac = crypto
-      .createHmac('sha256', JWT_SECRET)
+      .createHmac('sha256', JWT_SECRET!)
       .update(data)
       .digest('hex');
 

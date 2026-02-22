@@ -18,7 +18,7 @@ function generateToken(username: string): string {
     });
 
     const hmac = crypto
-      .createHmac('sha256', JWT_SECRET)
+      .createHmac('sha256', JWT_SECRET!)
       .update(tokenData)
       .digest('hex');
 
