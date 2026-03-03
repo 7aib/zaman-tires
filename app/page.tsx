@@ -9,13 +9,13 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Best Tire Shop in Wah Cantt - Zaman tyre Trader | 90+ Brands Available",
+    "Best Tire Shop in Wah Cantt & Islamabad - Zaman tyre Trader | 90+ Brands",
   description:
-    "Leading tire shop in Wah Cantt offering premium tires, rims, wheel alignment, and automotive services. 90+ tire brands including Yokohama, Dunlop, Michelin. Call 0300 5888776",
+    "Leading tire shop in Wah Cantt and Islamabad B-17 offering premium tires, rims, wheel alignment, and automotive services. 90+ brands including Yokohama, Dunlop, Michelin.",
   openGraph: {
-    title: "Best Tire Shop in Wah Cantt - Zaman tyre Trader",
+    title: "Best Tire Shop in Wah Cantt & Islamabad - Zaman tyre Trader",
     description:
-      "Leading tire shop in Wah Cantt offering premium tires, rims, wheel alignment, and automotive services.",
+      "Leading tire shop in Wah Cantt and Islamabad B-17 offering premium tires, rims, wheel alignment, and automotive services.",
     images: ["/hero-tires.jpg"],
   },
 };

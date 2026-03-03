@@ -62,7 +62,7 @@ const AboutHero = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed"
           >
-            Wah Cantt's most trusted tire shop, serving the community with
+            Your most trusted tire shop, serving Wah Cantt and Islamabad with
             premium automotive services and unmatched quality since our
             establishment.
           </motion.p>
@@ -81,13 +81,13 @@ const AboutHero = () => {
             </div>
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6">
               <Star className="h-8 w-8 text-primary-400 mx-auto mb-3" />
-              <div className="text-3xl font-bold text-white mb-1">4.0</div>
+              <div className="text-3xl font-bold text-white mb-1">{googleReviews.rating}</div>
               <div className="text-primary-200">Star Rating</div>
             </div>
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6">
               <MapPin className="h-8 w-8 text-primary-400 mx-auto mb-3" />
-              <div className="text-3xl font-bold text-white mb-1">Wah</div>
-              <div className="text-primary-200">Cantt Location</div>
+              <div className="text-3xl font-bold text-white mb-1">2</div>
+              <div className="text-primary-200">Branch Locations</div>
             </div>
           </motion.div>
         </motion.div>

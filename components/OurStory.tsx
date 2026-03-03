@@ -42,6 +42,12 @@ const OurStory = () => {
       description:
         `Maintained excellent customer satisfaction with ${googleReviews.rating}-star rating and ${googleReviews.reviewCount}+ positive reviews.`,
     },
+    {
+      year: "2025",
+      title: "Islamabad Expansion",
+      description:
+        "Opened our second branch in B-17 Multi Gardens, Islamabad, bringing our services to the capital.",
+    },
   ];
 
   const values = [
@@ -105,20 +111,19 @@ const OurStory = () => {
             </h3>
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
               Zaman tyre Trader was established with a simple mission: to
-              provide the highest quality tire services to the community of Wah
-              Cantt and surrounding areas. What started as a small tire shop has
-              grown into the most comprehensive automotive service center in the
-              region.
+              provide the highest quality tire services to the community.
+              What started as a single shop in Wah Cantt has
+              grown into a multi-branch operation, now serving both Wah Cantt and B-17 Islamabad.
             </p>
-            <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+            <p className="text-lg text-gray-400 mb-6 leading-relaxed">
               Today, we stock over 90+ tire brands, from premium international
               manufacturers like Yokohama, Dunlop, and Michelin to quality
               Chinese brands that offer excellent value. Our expert team
               provides professional tire installation, wheel alignment,
-              balancing, and a full range of automotive services.
+              balancing, and a full range of automotive services across all our locations.
             </p>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              Located conveniently on GT Road, Cantt, Wah, we've become the
+            <p className="text-lg text-gray-400 leading-relaxed">
+              With branches in Wah Cantt (GT Road) and Islamabad (B-17 Multi Gardens), we've become the
               preferred choice for thousands of satisfied customers who trust us
               with their vehicle maintenance needs.
             </p>
@@ -169,14 +174,12 @@ const OurStory = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className={`flex items-center ${
-                    index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                  }`}
+                  className={`flex items-center ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                    }`}
                 >
                   <div
-                    className={`w-full md:w-1/2 ${
-                      index % 2 === 0 ? "md:pr-8" : "md:pl-8"
-                    }`}
+                    className={`w-full md:w-1/2 ${index % 2 === 0 ? "md:pr-8" : "md:pl-8"
+                      }`}
                   >
                     <div className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
                       <div className="flex items-center space-x-3 mb-3">

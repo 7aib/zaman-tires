@@ -82,7 +82,7 @@ const Header = () => {
                 <h1 className="text-xl font-bold text-gray-300">
                   Zaman Tyre Trader
                 </h1>
-                <p className="text-sm text-gray-500">Wah Cantt, Pakistan</p>
+                <p className="text-sm text-gray-500">Wah Cantt & Islamabad</p>
               </div>
             </Link>
 

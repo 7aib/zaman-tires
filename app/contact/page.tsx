@@ -6,13 +6,13 @@ import GoogleMap from "@/components/GoogleMap";
 import BusinessHours from "@/components/BusinessHours";
 
 export const metadata: Metadata = {
-  title: "Contact Zaman tyre Trader - Phone: 0300 5888776 | GT Rd, Cantt, Wah",
+  title: "Contact Zaman tyre Trader - Wah Cantt & Islamabad | Phone: 0300 5888776",
   description:
-    "Contact Zaman tyre Trader in Wah Cantt. Phone: 0300 5888776. Located on GT Rd, Cantt, Wah. Open 9 AM - 9 PM daily. Get directions and visit our tire shop.",
+    "Visit Zaman tyre Trader in Wah Cantt or our new Islamabad B-17 branch. Phone: 0300 5888776. Premium tires, rims, and automotive services at both locations.",
   openGraph: {
-    title: "Contact Zaman tyre Trader - Wah Cantt Tire Shop",
+    title: "Contact Zaman tyre Trader - Wah Cantt & Islamabad",
     description:
-      "Contact us at 0300 5888776. Located on GT Rd, Cantt, Wah. Open daily 9 AM - 9 PM.",
+      "Contact us at 0300 5888776. Locations in Wah Cantt and Islamabad B-17. Open daily 9 AM - 9 PM.",
   },
 };
 

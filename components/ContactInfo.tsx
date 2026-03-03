@@ -15,10 +15,13 @@ const ContactInfo = () => {
     },
     {
       icon: MapPin,
-      title: 'Our Location',
-      details: ['GT Rd, Cantt, Wah', 'Pakistan'],
-      description: 'Conveniently located on GT Road in Wah Cantt. Easy to find and access.',
-      action: { text: 'Get Directions', href: 'https://www.google.com/maps/dir/?api=1&destination=33.75530,72.74754' }
+      title: 'Our Locations',
+      details: [
+        'Wah Cantt Branch: GT Rd, Cantt, Wah',
+        'Islamabad Branch: Block B1 Arcade, B-17, Islamabad'
+      ],
+      description: 'Find us at our main branch in Wah Cantt or our new location in B-17 Islamabad.',
+      action: { text: 'View Locations', href: '/contact#locations' }
     },
     {
       icon: Clock,
@@ -51,7 +54,7 @@ const ContactInfo = () => {
             Contact <span className="text-primary-600">Information</span>
           </h2>
           <p className="text-xl text-gray-500 max-w-3xl mx-auto leading-relaxed">
-            Multiple ways to reach us. Choose the method that's most convenient for you. 
+            Multiple ways to reach us. Choose the method that's most convenient for you.
             We're here to help with all your tire and automotive service needs.
           </p>
         </motion.div>
@@ -116,10 +119,10 @@ const ContactInfo = () => {
               Need Immediate Assistance?
             </h3>
             <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
-              For urgent tire issues or immediate service needs, call us directly. 
+              For urgent tire issues or immediate service needs, call us directly.
               Our team is ready to help you get back on the road safely.
             </p>
-            
+
             <div className="flex items-center justify-center space-x-4 mb-8">
               <div className="flex">
                 {[...Array(5)].map((_, i) => (

@@ -70,9 +70,7 @@ const Footer = () => {
   const quickLinks = [
     { name: "About Us", href: "/about" },
     { name: "Services", href: "/services" },
-    { name: "Brands", href: "/brands" },
     { name: "Products", href: "/products" },
-    { name: "Reviews", href: "/reviews" },
     { name: "Contact", href: "/contact" },
   ];
 
@@ -194,16 +192,30 @@ const Footer = () => {
                 </div>
               </div>
               <div className="flex items-start space-x-3">
-                <MapPin className="h-5 w-5 text-primary-400 mt-0.5 flex-shrink-0" />
-                <div>
-                  <a
-                    href="https://share.google/v8LnVtVICJoSqbK1Q"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
-                  >
-                    GT Rd, Cantt, Wah, Pakistan
-                  </a>
+                <MapPin className="h-5 w-5 text-primary-400 mt-1 flex-shrink-0" />
+                <div className="space-y-2">
+                  <div>
+                    <p className="text-gray-300 font-medium text-sm">Wah Cantt Branch</p>
+                    <a
+                      href="https://share.google/v8LnVtVICJoSqbK1Q"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+                    >
+                      GT Rd, Cantt, Wah
+                    </a>
+                  </div>
+                  <div>
+                    <p className="text-gray-300 font-medium text-sm">Islamabad Branch</p>
+                    <a
+                      href="https://maps.app.goo.gl/1GqYrsuvis5Y2paLA"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+                    >
+                      Block B1 Arcade, B-17
+                    </a>
+                  </div>
                 </div>
               </div>
               <div className="flex items-start space-x-3">

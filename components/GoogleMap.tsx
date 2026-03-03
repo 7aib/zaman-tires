@@ -1,140 +1,157 @@
 "use client";
 
-import { motion } from "motion/react";
-import { MapPin, Navigation, ExternalLink } from "lucide-react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
+import { MapPin, Navigation, ExternalLink, ChevronRight } from "lucide-react";
+
+const branches = [
+  {
+    id: "wah-cantt",
+    name: "Zaman Tyre Trader - Wah Cantt",
+    address: "GT Rd, Cantt, Wah, Pakistan",
+    coordinates: "33.75530,72.74754",
+    embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.12345!2d72.74754!3d33.7553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfa7321e1a473f%3A0x6bba46c57f5c9e99!2sZaman%20Tyre%20Trader!5e0!3m2!1sen!2spk!4v1700000000000!5m2!1sen!2spk",
+    directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=33.75530,72.74754",
+    searchUrl: "https://www.google.com/search?q=Zaman+tyre+Trader+Wah+Cantt"
+  },
+  {
+    id: "islamabad-b17",
+    name: "Zaman Tyre Trader - Islamabad B-17",
+    address: "Block B1 Arcade, B-17 Multi Gardens, Islamabad, Pakistan",
+    coordinates: "33.6892, 72.8204",
+    embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3325.29!2d72.8204!3d33.6892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38df9792080f507b%3A0xe781907cb387431e!2sZaman%20Tyre%20Trader%20Islamabad%20B_17!5e0!3m2!1sen!2spk!4v1700000000000!5m2!1sen!2spk",
+    directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=33.689204,72.820383",
+    searchUrl: "https://www.google.com/search?q=Zaman+tyre+Trader+Islamabad+B-17"
+  }
+];
 
 const GoogleMap = () => {
+  const [activeBranch, setActiveBranch] = useState(branches[0]);
+
   return (
-    <section className="bg-gray-900 p-8 md:p-12">
-      <div className="max-w-2xl mx-auto">
+    <section id="locations" className="bg-gray-900 p-8 md:p-12 scroll-mt-20">
+      <div className="max-w-4xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-300 mb-6">
-            Find Us on <span className="text-primary-600">Google Maps</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-300 mb-6">
+            Our <span className="text-primary-600">Locations</span>
           </h2>
-          <p className="text-gray-500 mb-8 leading-relaxed">
-            Located conveniently on GT Road, Cantt, Wah. Easy to find and access
-            from all major roads. Plenty of parking space available for your
-            vehicle.
+          <p className="text-gray-500 text-center mb-10 leading-relaxed max-w-2xl mx-auto">
+            Visit us at any of our conveniently located branches for premium tires and automotive services.
           </p>
 
-          {/* Map Container */}
-          <div className="bg-gray-800 rounded-xl shadow-lg overflow-hidden mb-6">
-            {/* Google Maps Embed */}
-            <div className="relative w-full h-80 bg-gray-700">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.1234567890123!2d72.7581!3d33.7741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sGT%20Rd%2C%20Cantt%2C%20Wah!5e0!3m2!1sen!2spk!4v1234567890123!5m2!1sen!2spk"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Zaman tyre Trader Location"
-              />
-            </div>
-
-            {/* Map Info */}
-            <div className="p-6 bg-gray-800">
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-primary-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <MapPin className="h-6 w-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-300 mb-2">
-                    Zaman tyre Trader
-                  </h3>
-                  <p className="text-gray-500 mb-3">
-                    GT Rd, Cantt, Wah
-                    <br />
-                    Pakistan
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    <a
-                      href="https://www.google.com/maps/dir/?api=1&destination=33.75530,72.74754"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center space-x-2 bg-primary-600 hover:bg-primary-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200 text-sm"
-                    >
-                      <Navigation className="h-4 w-4" />
-                      <span>Get Directions</span>
-                    </a>
-                    <a
-                      href="https://www.google.com/search?q=Zaman+tyre+Trader+Wah+Cantt"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center space-x-2 bg-gray-600 hover:bg-gray-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200 text-sm"
-                    >
-                      <ExternalLink className="h-4 w-4" />
-                      <span>View on Google</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
+          {/* Branch Switcher */}
+          <div className="flex flex-wrap justify-center gap-4 mb-10">
+            {branches.map((branch) => (
+              <button
+                key={branch.id}
+                onClick={() => setActiveBranch(branch)}
+                className={`flex items-center space-x-2 px-6 py-3 rounded-full font-semibold transition-all duration-300 ${activeBranch.id === branch.id
+                  ? "bg-primary-600 text-white shadow-lg shadow-primary-600/20"
+                  : "bg-gray-800 text-gray-400 hover:bg-gray-700"
+                  }`}
+              >
+                <MapPin className="h-4 w-4" />
+                <span>{branch.id === "wah-cantt" ? "Wah Cantt" : "Islamabad B-17"}</span>
+                {activeBranch.id === branch.id && (
+                  <motion.div layoutId="active" className="ml-1">
+                    <div className="w-1.5 h-1.5 bg-white rounded-full" />
+                  </motion.div>
+                )}
+              </button>
+            ))}
           </div>
 
-          {/* Location Details */}
-          <div className="bg-gray-800 rounded-xl shadow-lg p-6">
-            <h3 className="text-xl font-semibold text-gray-300 mb-4">
-              Location Details
-            </h3>
-            <div className="space-y-4">
-              <div className="flex items-start space-x-3">
-                <div className="w-6 h-6 bg-primary-900 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <div className="w-2 h-2 bg-primary-600 rounded-full" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-300">Easy to Find</h4>
-                  <p className="text-gray-500 text-sm">
-                    Located on main GT Road, easily accessible from all
-                    directions
-                  </p>
-                </div>
-              </div>
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
+            {/* Map Container */}
+            <div className="lg:col-span-3 bg-gray-800 rounded-2xl shadow-xl overflow-hidden border border-gray-700">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activeBranch.id}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.4 }}
+                  className="relative w-full h-[400px] bg-gray-700"
+                >
+                  <iframe
+                    src={activeBranch.embedUrl}
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title={activeBranch.name}
+                  />
+                </motion.div>
+              </AnimatePresence>
+            </div>
 
-              <div className="flex items-start space-x-3">
-                <div className="w-6 h-6 bg-primary-900 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <div className="w-2 h-2 bg-primary-600 rounded-full" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-300">Ample Parking</h4>
-                  <p className="text-gray-500 text-sm">
-                    Free parking space available for customers
-                  </p>
-                </div>
-              </div>
+            {/* Branch Info Card */}
+            <div className="lg:col-span-2 space-y-6">
+              <div className="bg-gray-800 rounded-2xl shadow-xl p-8 border border-gray-700 h-full">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={activeBranch.id}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -20 }}
+                    transition={{ duration: 0.4 }}
+                  >
+                    <div className="w-14 h-14 bg-primary-600/10 rounded-2xl flex items-center justify-center mb-6 border border-primary-600/20">
+                      <MapPin className="h-7 w-7 text-primary-500" />
+                    </div>
 
-              <div className="flex items-start space-x-3">
-                <div className="w-6 h-6 bg-primary-900 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <div className="w-2 h-2 bg-primary-600 rounded-full" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-300">
-                    Public Transport
-                  </h4>
-                  <p className="text-gray-500 text-sm">
-                    Well connected by public transport and rickshaws
-                  </p>
-                </div>
-              </div>
+                    <h3 className="text-2xl font-bold text-gray-200 mb-4">
+                      {activeBranch.name}
+                    </h3>
 
-              <div className="flex items-start space-x-3">
-                <div className="w-6 h-6 bg-primary-900 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <div className="w-2 h-2 bg-primary-600 rounded-full" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-300">
-                    Landmarks Nearby
-                  </h4>
-                  <p className="text-gray-500 text-sm">
-                    Close to Wah Cantt main market and residential areas
-                  </p>
-                </div>
+                    <p className="text-gray-400 mb-8 leading-relaxed">
+                      {activeBranch.address}
+                    </p>
+
+                    <div className="space-y-4 mb-8">
+                      <div className="flex items-center space-x-3 text-gray-400">
+                        <div className="w-1.5 h-1.5 bg-primary-500 rounded-full" />
+                        <span>Premium Tire Service</span>
+                      </div>
+                      <div className="flex items-center space-x-3 text-gray-400">
+                        <div className="w-1.5 h-1.5 bg-primary-500 rounded-full" />
+                        <span>Professional Technicians</span>
+                      </div>
+                      <div className="flex items-center space-x-3 text-gray-400">
+                        <div className="w-1.5 h-1.5 bg-primary-500 rounded-full" />
+                        <span>State-of-the-art Equipment</span>
+                      </div>
+                    </div>
+
+                    <div className="flex flex-col gap-3">
+                      <a
+                        href={activeBranch.directionsUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center space-x-2 bg-primary-600 hover:bg-primary-700 text-white font-bold py-4 px-6 rounded-xl transition-all duration-200 shadow-lg shadow-primary-600/20"
+                      >
+                        <Navigation className="h-5 w-5" />
+                        <span>Get Directions</span>
+                      </a>
+                      <a
+                        href={activeBranch.searchUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center space-x-2 bg-gray-700 hover:bg-gray-600 text-gray-200 font-semibold py-3 px-6 rounded-xl transition-all duration-200"
+                      >
+                        <ExternalLink className="h-4 w-4" />
+                        <span>View on Google</span>
+                      </a>
+                    </div>
+                  </motion.div>
+                </AnimatePresence>
               </div>
             </div>
           </div>

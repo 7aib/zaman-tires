@@ -10,11 +10,11 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   metadataBase: new URL("https://zamantyretrader.com"),
   title: {
-    default: "Zaman Tyre Trader - Best Tire Shop in Wah Cantt, Pakistan",
+    default: "Zaman Tyre Trader - Best Tire Shop in Wah Cantt & Islamabad",
     template: "%s | Zaman tyre Trader",
   },
   description:
-    "Leading tire shop in Wah Cantt offering premium tires, rims, wheel alignment, and automotive services. 90+ tire brands including Yokohama, Dunlop, Michelin. Call 0300 5888776",
+    "Leading tire shop in Wah Cantt and Islamabad B-17 offering premium tires, rims, wheel alignment, and automotive services. 90+ tire brands available.",
   keywords: [
     "Zaman tyre Trader Wah Cantt",
     "tire shop in Wah Cantt",
@@ -51,24 +51,24 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://zamantyretrader.com",
-    title: "Zaman tyre Trader - Best Tire Shop in Wah Cantt, Pakistan",
+    title: "Zaman tyre Trader - Best Tire Shop in Wah Cantt & Islamabad",
     description:
-      "Leading tire shop in Wah Cantt offering premium tires, rims, wheel alignment, and automotive services. 90+ tire brands including Yokohama, Dunlop, Michelin.",
+      "Leading tire shop in Wah Cantt and Islamabad B-17 offering premium tires, rims, wheel alignment, and automotive services.",
     siteName: "Zaman tyre Trader",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Zaman tyre Trader - Best Tire Shop in Wah Cantt",
+        alt: "Zaman tyre Trader - Best Tire Shop in Wah Cantt & Islamabad",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Zaman tyre Trader - Best Tire Shop in Wah Cantt, Pakistan",
+    title: "Zaman tyre Trader - Best Tire Shop in Wah Cantt & Islamabad",
     description:
-      "Leading tire shop in Wah Cantt offering premium tires, rims, wheel alignment, and automotive services.",
+      "Leading tire shop in Wah Cantt and Islamabad B-17 offering premium tires, rims, wheel alignment, and automotive services.",
     images: ["/og-image.jpg"],
   },
   verification: {
@@ -84,7 +84,7 @@ const jsonLd = {
   "@type": "AutoRepair",
   name: "Zaman tyre Trader",
   description:
-    "Leading tire shop in Wah Cantt offering premium tires, rims, wheel alignment, and automotive services",
+    "Leading tire shop in Wah Cantt and Islamabad B-17 offering premium tires, rims, wheel alignment, and automotive services",
   url: "http://zamantyretrader.com",
   telephone: "+92-300-5888776",
   address: {

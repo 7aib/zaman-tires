@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
+import Link from "next/link";
 import { Clock, Calendar, Phone, MapPin } from "lucide-react";
 import { getCurrentStatus, getCurrentStatusColor } from "@/utils/shopStatus";
 
@@ -137,7 +138,7 @@ const BusinessHours = () => {
                     <div>
                       <p className="font-semibold text-gray-300">Address</p>
                       <p className="text-gray-500">
-                        GT Rd, Cantt, Wah, Pakistan
+                        Wah Cantt & Islamabad B-17
                       </p>
                     </div>
                   </div>
@@ -150,14 +151,12 @@ const BusinessHours = () => {
                   >
                     Call Now
                   </a>
-                  <a
-                    href="https://www.google.com/maps/dir/?api=1&destination=33.75530,72.74754"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link
+                    href="/contact#locations"
                     className="flex-1 bg-gray-600 hover:bg-gray-700 text-white font-semibold py-3 px-4 rounded-lg text-center transition-colors duration-200"
                   >
-                    Get Directions
-                  </a>
+                    View Locations
+                  </Link>
                 </div>
               </div>
 
@@ -244,8 +243,8 @@ const BusinessHours = () => {
               Ready to Visit Us?
             </h3>
             <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
-              Come visit our shop during business hours for the best tire
-              services in Wah Cantt. No appointment necessary for most services.
+              Come visit our shops in Wah Cantt or Islamabad for the best tire
+              services. No appointment necessary for most services.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
               <a
@@ -254,14 +253,12 @@ const BusinessHours = () => {
               >
                 Call: 0300 5888776
               </a>
-              <a
-                href="https://www.google.com/maps/dir/?api=1&destination=33.75530,72.74754"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/contact#locations"
                 className="bg-primary-700 hover:bg-primary-800 text-white font-semibold py-3 px-8 rounded-lg border border-primary-500 transition-colors duration-200"
               >
                 Get Directions
-              </a>
+              </Link>
             </div>
           </div>
         </motion.div>

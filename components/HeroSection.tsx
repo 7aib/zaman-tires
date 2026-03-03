@@ -3,6 +3,7 @@
 import { ChevronLeft, ChevronRight, Star, MapPin, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { googleReviews } from "@/utils/googleReviews";
 
 interface SlideContent {
@@ -202,7 +203,7 @@ const HeroSection = () => {
               >
                 <div className="flex items-center space-x-2 text-gray-200">
                   <MapPin className="h-5 w-5 text-primary-400 flex-shrink-0" />
-                  <span>GT Rd, Cantt, Wah</span>
+                  <span>Wah Cantt & Islamabad</span>
                 </div>
                 <div className="flex items-center space-x-2 text-gray-200">
                   <Phone className="h-5 w-5 text-primary-400 flex-shrink-0" />
@@ -225,15 +226,13 @@ const HeroSection = () => {
                   <span>{slide.cta}</span>
                 </a>
 
-                <a
-                  href="https://www.google.com/maps/dir/?api=1&destination=33.75530,72.74754"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/contact#locations"
                   className="bg-white bg-opacity-20 backdrop-blur-sm hover:bg-opacity-30 text-white font-semibold py-4 px-8 rounded-lg border border-white border-opacity-30 transition-all duration-300 hover:scale-105 flex items-center space-x-2 text-lg"
                 >
                   <MapPin className="h-5 w-5" />
                   <span>Get Directions</span>
-                </a>
+                </Link>
               </motion.div>
             </motion.div>
 
