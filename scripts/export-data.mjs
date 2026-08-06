@@ -6,25 +6,44 @@
 // Usage:
 //   node scripts/export-data.mjs
 //
-// It resolves the database the same way the app does:
-//   - $DB_PATH, or
-//   - $DATABASE_URL (a `file:` URL), or
-//   - ./dev.db in the project root
+// The database is located by checking (in order):
+//   - $DATABASE_URL or $DB_PATH (values from the shell or a root .env)
+//   - ./dev.db and ./prisma/dev.db
 //
 // Uses the built-in `node:sqlite` module on Node 22.5+; falls back to
-// @prisma/client on older runtimes.
+// @prisma/client on older runtimes. If no database can be opened, an empty
+// dataset is written with a warning so builds never fail.
 
-import { mkdirSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const dataDir = resolve(root, "public", "data");
 
-function dbPath() {
+// Minimal .env loader (no dotenv dependency). Only sets keys that are not
+// already present in the environment.
+function loadEnv() {
+  const envFile = resolve(root, ".env");
+  if (!existsSync(envFile)) return;
+  for (const line of readFileSync(envFile, "utf8").split(/\r?\n/)) {
+    const m = line.match(/^\s*([\w.-]+)\s*=\s*(.*)\s*$/);
+    if (!m) continue;
+    const [, key, raw] = m;
+    if (process.env[key] === undefined) {
+      process.env[key] = raw.replace(/^["']|["']$/g, "");
+    }
+  }
+}
+
+function candidateDbPaths() {
+  const candidates = [];
   const fromEnv = process.env.DB_PATH || process.env.DATABASE_URL;
-  if (fromEnv) return resolve(root, fromEnv.replace(/^file:/, ""));
-  return resolve(root, "dev.db");
+  if (fromEnv) candidates.push(resolve(root, fromEnv.replace(/^file:/, "")));
+  candidates.push(resolve(root, "dev.db"));
+  candidates.push(resolve(root, "prisma", "dev.db"));
+  candidates.push(resolve(root, "prod.db"));
+  return candidates;
 }
 
 async function exportNodeSqlite(path) {
@@ -76,18 +95,47 @@ async function exportPrisma() {
 }
 
 async function main() {
-  const path = dbPath();
-  let data;
+  loadEnv();
+
+  const paths = candidateDbPaths();
+  let data = null;
+  let usedPath = null;
+
+  // 1) Prefer node:sqlite (built-in on Node 22.5+).
   try {
-    data = await exportNodeSqlite(path);
-    console.log(`Exported using node:sqlite (${path})`);
-  } catch (err) {
-    if (err && err.code === "ERR_UNKNOWN_BUILTIN_MODULE") {
-      console.log("node:sqlite unavailable, falling back to Prisma");
-      data = await exportPrisma();
-    } else {
-      throw err;
+    await import("node:sqlite");
+  } catch {
+    // fall through to Prisma below
+  }
+
+  for (const p of paths) {
+    try {
+      data = await exportNodeSqlite(p);
+      usedPath = p;
+      break;
+    } catch {
+      // try the next candidate
     }
+  }
+
+  // 2) Fall back to @prisma/client (Node < 22.5).
+  if (!data) {
+    try {
+      data = await exportPrisma();
+      usedPath = "prisma client";
+    } catch {
+      // fall through to empty dataset
+    }
+  }
+
+  // 3) No database available - write an empty dataset so the build succeeds.
+  if (!data) {
+    console.warn(
+      `[export-data] No database found. Tried: ${paths.join(", ")}. ` +
+        "Writing empty product data. Provide DATABASE_URL (or a dev.db file) " +
+        "and run `node scripts/export-data.mjs` to populate the site."
+    );
+    data = { products: [], brands: [], diameters: [] };
   }
 
   mkdirSync(dataDir, { recursive: true });
@@ -96,7 +144,8 @@ async function main() {
   writeFileSync(resolve(dataDir, "diameters.json"), JSON.stringify(data.diameters, null, 2));
 
   console.log(
-    `Wrote ${data.products.length} products, ${data.brands.length} brands, ${data.diameters.length} diameters to public/data/`
+    `[export-data] Used ${usedPath || "no database (empty)"}: wrote ${data.products.length} products, ` +
+      `${data.brands.length} brands, ${data.diameters.length} diameters to public/data/`
   );
 }
 
