@@ -67,27 +67,45 @@ yarn dev
 
 ## 📦 Build & Deployment
 
+The site builds as a **fully static export** (`output: "export"`), so the shared host only serves static files — no Node process runs, which keeps usage well below the host's process limit.
+
 ### Build for Production
 
 ```bash
+npm install
 npm run build
-# or
-yarn build
 ```
 
-### Start Production Server
+`prebuild` automatically dumps the SQLite database into `public/data/*.json`
+(products, brands, diameters), so the exported pages are built with the latest
+data. The output is written to the `out/` folder.
 
-```bash
-npm start
-# or
-yarn start
-```
+### Deploy to Shared Hosting (cPanel / CloudLinux)
+
+1. Upload the contents of the `out/` folder to your document root (e.g. `public_html/`).
+2. In cPanel, stop/remove the Node.js app (the site no longer needs it).
+3. Optionally add `.htaccess` redirects for any old paths.
+
+### Updating Products
+
+The SQLite database is the source of truth. To publish changes:
+
+1. Update the data in the database (edit `dev.db` locally, or replace it with the
+   production database file).
+2. Rebuild: `npm run build` (re-exports data automatically).
+3. Re-upload the new `out/` folder.
+
+> Tip: you can also regenerate the data files only, without a full rebuild:
+> `node scripts/export-data.mjs`
+
+> Note: `/admin` and the `/api/*` routes were removed in the static export — they
+> require a Node server. Product updates now go through the rebuild flow above.
 
 ### Deploy to Vercel
 
 1. Push your code to GitHub
 2. Connect your repository to Vercel
-3. Deploy automatically
+3. Deploy automatically (Vercel serves the static export with no server)
 
 ## 🎨 Customization
 

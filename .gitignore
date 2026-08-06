@@ -12,6 +12,9 @@
 /.next/
 /out/
 
+# generated static data (recreated by scripts/export-data.mjs on build)
+/public/data/
+
 # production
 /build
 

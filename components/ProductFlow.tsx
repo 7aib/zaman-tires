@@ -39,9 +39,9 @@ const ProductFlow = () => {
       setLoading(true);
       try {
         const [prodRes, brandRes, diaRes] = await Promise.all([
-          fetch("/api/products"),
-          fetch("/api/brands"),
-          fetch("/api/diameters")
+          fetch("/data/products.json"),
+          fetch("/data/brands.json"),
+          fetch("/data/diameters.json")
         ]);
 
         if (prodRes.ok) setProducts(await prodRes.json());
